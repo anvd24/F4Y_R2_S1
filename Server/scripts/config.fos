@@ -26,7 +26,7 @@ void InitializeGame()                  // Export
     __LevelCap = 24; //old value is 24 new value is ?? 
     __LevelCapAddExperience = false; //false is default 
     __LookNormal = 20;
-    __LookMinimum = 3;
+    __LookMinimum = 2;
     __CritterIdleTick = 10000;
     __TurnBasedTick = 30000;
     __Breaktime = 1200;
