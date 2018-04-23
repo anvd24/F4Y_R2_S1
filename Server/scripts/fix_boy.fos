@@ -1051,8 +1051,8 @@ bool ReverseItemCustom(Critter& cr, Item& item, bool isMassScience)
     }
 	case PID_EXPLOSIVE_ROCKET:
     {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
+        if(item.GetCount() > 10)
+            item.SetCount(item.GetCount() - 10);
         else
             DeleteItem(item);
 
@@ -1065,8 +1065,8 @@ bool ReverseItemCustom(Critter& cr, Item& item, bool isMassScience)
     }
 	case PID_ROCKET_AP:
     {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
+        if(item.GetCount() > 10)
+            item.SetCount(item.GetCount() - 10);
         else
             DeleteItem(item);
 
