@@ -861,221 +861,38 @@ bool ReverseItemCustom(Critter& cr, Item& item, bool isMassScience)
         else
             DeleteItem(item);
 
-        cr.AddItem(PID_GUNPOWDER2, Random(20, 28));
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	// new decraft items like AMMO but not is speciall
-	case PID_9MM_BALL: 
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(1, 4)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_5MM_JHP:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(1, 2)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_5MM_AP:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER2, Random(0, 1)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_7_62MM_AMMO:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(1, 5)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_9MM_AMMO:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(0, 2)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_10MM_JHP:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(1, 6)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_10MM_AP:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(1, 8)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_14MM_AP:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER2, Random(1, 2)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_44_MAGNUM_JHP:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(1, 8)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_44_FMJ_MAGNUM:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(1, 8)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_45_CALIBER_AMMO:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(1, 3)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		//cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_223_FMJ:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER2, Random(1, 3)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-        if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
-        return true;
-    }
-	case PID_SHOTGUN_SHELLS:
-    {
-        if(item.GetCount() > 100)
-            item.SetCount(item.GetCount() - 100);
-        else
-            DeleteItem(item);
-
-        cr.AddItem(PID_GUNPOWDER, Random(1, 7)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
+		cr.AddItem(PID_GUNPOWDER, Random(20, 30));
+		 cr.AddItem(PID_GUNPOWDER2, Random(10, 20));
         if(!isMassScience)
             cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
         return true;
     }
 	case PID_EXPLOSIVE_ROCKET:
     {
-        if(item.GetCount() > 10)
-            item.SetCount(item.GetCount() - 10);
+        if(item.GetCount() > 1)
+            item.SetCount(item.GetCount() - 1);
         else
             DeleteItem(item);
 
-        cr.AddItem(PID_GUNPOWDER, Random(1, 3)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
+        cr.AddItem(PID_GUNPOWDER, Random(0, 1)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
+		//cr.AddItem(PID_METAL_PARTS, Random(0, 4));	//add metal parts
+		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
         if(!isMassScience)
             cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
         return true;
     }
 	case PID_ROCKET_AP:
     {
-        if(item.GetCount() > 10)
-            item.SetCount(item.GetCount() - 10);
+        if(item.GetCount() > 1)
+            item.SetCount(item.GetCount() - 1);
         else
             DeleteItem(item);
 
-        cr.AddItem(PID_GUNPOWDER2, Random(1, 3)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
-		cr.AddItem(PID_ELECTRONIC_PARTS, Random(0, 1));	//add electronic parts
+        cr.AddItem(PID_GUNPOWDER2, Random(0, 1)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
+		//cr.AddItem(PID_METAL_PARTS, Random(0, 4));	//add metal parts
+		//cr.AddItem(PID_ELECTRONIC_PARTS, Random(0, 1));	//add electronic parts
         if(!isMassScience)
-            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
+            cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of advanced gunpowder from this shell.");
         return true;
     }
     }

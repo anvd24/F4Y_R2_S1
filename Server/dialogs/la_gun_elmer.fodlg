@@ -23,7 +23,8 @@ lang=engl
 6 4020 D _var n acquaintance = 0 R _var n acquaintance = 1 #
 80 4030 D _var n acquaintance = 1 D _param p PE_PROFESSION_ENERGY_EXPERT < 1 #
 100 4040 #
-0 4050 @
+400 4050 #
+0 4060 @
 5 5000 None 0 #
 65505 5010 #
 6 5020 D _var n acquaintance = 0 R _var n acquaintance = 1 #
@@ -46,7 +47,10 @@ lang=engl
 301 12020 D _item p PID_BOTTLE_CAPS > 44999 R _script dialog@r_RemoveMoney 1 45000 R _item p PID_YK42B_PULSE_RIFLE + 1 #
 0 12030 @
 300 13000 None 0 @
-301 14000 None 0 &
+301 14000 None 0 @
+400 15000 None 0 #
+400 15010 D _item p PID_BOTTLE_CAPS > 2999 R _script dialog@r_RemoveMoney 1 3000 R _item p PID_HOWITZER_SHELL + 1 #
+0 15020 &
 
 [engl]
 {100}{}{Elmer}
@@ -70,7 +74,8 @@ lang=engl
 {4020}{}{What are you doing here?}
 {4030}{}{Let's talk about energy production and storage.}
 {4040}{}{Hi, Elmer. Can you make anything to order?}
-{4050}{}{Bye.}
+{4050}{}{I see big shells in stuff. Can i buy some?}
+{4060}{}{Bye.}
 {5000}{}{You better talk to someone else about that, I'm really not into that kind of stuff.}
 {5010}{}{Good, let me ask you something else then.}
 {5020}{}{And into what kind of stuff are you?}
@@ -94,4 +99,7 @@ lang=engl
 {12030}{}{Exit}
 {13000}{}{YK32 Pulse Pistol is yours.}
 {14000}{}{YK42B Pulse Rifle is yours.}
+{15000}{}{Hm. We have more then need to us. You can buy some. Tell me more about this. Hou much do you need? 3 000 cups fore one shell..Deal?}
+{15010}{}{Ok. Give me One}
+{15020}{}{Exit}
 
