@@ -43,7 +43,8 @@ lang=engl
 60 7050 #
 80 7060 D _param p PE_PROFESSION_DEMOLITION_EXPERT < 2 #
 70 7070 #
-0 7080 @
+400 7080 D _param p PE_PROFESSION_DEMOLITION_EXPERT > 0 #
+0 7090 @
 8 8000 None 0 #
 7 8010 #
 9 8020 R _var p loyality - 10 #
@@ -94,7 +95,13 @@ lang=engl
 71 23030 D _item p PID_BOTTLE_CAPS > 24999 R _script dialog@r_RemoveMoney 1 25000 R _item p PID_BLUEPRINT_PLASTIC_EXPLOSIVES + 1 #
 0 23040 @
 71 24000 None 0 #
-0 24010 &
+0 24010 @
+400 25000 None 0 #
+400 25010 D _item p PID_BOTTLE_CAPS > 2999 R _script dialog@r_RemoveMoney 1 3000 R _item p PID_DETONATOR_PARTS + 1 #
+400 25020 D _item p PID_BOTTLE_CAPS > 14999 R _script dialog@r_RemoveMoney 1 15000 R _item p PID_DETONATOR_PARTS + 5 #
+400 25030 D _item p PID_BOTTLE_CAPS > 29999 R _script dialog@r_RemoveMoney 1 30000 R _item p PID_DETONATOR_PARTS + 10 #
+65505 25040 #
+0 25050 &
 
 [engl]
 {100}{}{Zaius}
@@ -138,7 +145,8 @@ lang=engl
 {7050}{}{Can I buy some Uranium Ore from you?}
 {7060}{}{You must be one of the experts when it comes to blowing things up.}
 {7070}{}{Do you have any blueprints for sale?}
-{7080}{}{Nothing for me, see you around.}
+{7080}{}{Look, I need fuses, do you have anything like that?}
+{7090}{}{Nothing for me, see you around.}
 {8000}{}{Ha. Ha. Funny. Nothing better than having a smartass around.}
 {8010}{}{I had a couple questions.}
 {8020}{}{The main problem here is that you're an idiot.}
@@ -191,4 +199,10 @@ lang=engl
 {23040}{}{Maybe some other time.}
 {24000}{}{Here's your blueprint. Come back if you need another one.}
 {24010}{}{Sure. Thanks!}
+{25000}{}{No problem, but try not to blow anything up. How much you need? One detonator cost is 3k cups for you.}
+{25010}{}{Need One}
+{25020}{}{Need Five}
+{25030}{}{WANABIGBOOM - Give me Ten}
+{25040}{}{Back}
+{25050}{}{Close Dialog}
 
