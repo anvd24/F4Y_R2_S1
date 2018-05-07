@@ -103,13 +103,18 @@ void AddArmorBonus(Item@ it, int number)
 	// Choose which bonus and specify bonus value range	
 	do
 	{
-	bonusType=Random(105,maxBonusType);
+	bonusType=Random(100,maxBonusType);
 	}
 	while (HasBonusAlready(it,bonusType));
 	
 	switch(bonusType)
 	{
 	// Armors and helmets
+	case BONUS_ARMOR_NORMAL_DT: {maxRoll=10;break;}
+	case BONUS_ARMOR_LASER_DT: {maxRoll=10;break;}
+	case BONUS_ARMOR_FIRE_DT: {maxRoll=10;break;}
+	case BONUS_ARMOR_PLASMA_DT: {maxRoll=10;break;}
+	case BONUS_ARMOR_EXPLODE_DT: {maxRoll=10;break;}
 	case BONUS_ARMOR_NORMAL_DR: {maxRoll=20;break;}
 	case BONUS_ARMOR_LASER_DR: {maxRoll=20;break;}
 	case BONUS_ARMOR_FIRE_DR: {maxRoll=20;break;}
@@ -128,7 +133,7 @@ void AddArmorBonus(Item@ it, int number)
 	case BONUS_ARMOR_INTELLIGENCE: break;
 	case BONUS_ARMOR_AGILITY: break;
 	case BONUS_ARMOR_LUCK: break;
-	case BONUS_ARMOR_CARRY_WEIGHT: {minRoll=30;maxRoll=40;break;}
+	case BONUS_ARMOR_CARRY_WEIGHT: {minRoll=50;maxRoll=80;break;}
 	case BONUS_ARMOR_HEALING_RATE: {minRoll=5;maxRoll=10;break;}
 	default: break;
 	}

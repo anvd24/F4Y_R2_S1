@@ -26,7 +26,7 @@ void InitializeGame()                  // Export
     __LevelCap = 24; //old value is 24 new value is ?? 
     __LevelCapAddExperience = false; //false is default 
     __LookNormal = 20;
-    __LookMinimum = 2;
+    __LookMinimum = 3;
     __CritterIdleTick = 10000;
     __TurnBasedTick = 30000;
     __Breaktime = 1200;
@@ -120,7 +120,7 @@ void InitializeGame()                  // Export
     __MaxNameLength = 18;  // Maximum 30
     __DlgTalkMinTime = 1000000;
     __DlgBarterMinTime = 1000000;
-    __GlobalMapMoveTime         = 250;
+    __GlobalMapMoveTime         = 250;  // The speed which the players moves on the worldmap default 250 set to 125???
     __EncounterTime             = 4000;
     __MinimumOfflineTime        = 180000;     // 3 minutes = 180000 2 days is 172800000
 

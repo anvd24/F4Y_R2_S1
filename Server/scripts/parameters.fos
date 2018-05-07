@@ -123,9 +123,9 @@ void changedParam_Experience(Critter& cr, uint, int oldValue)   // server
                 }
 				
 				}
-				//if((level > 24) && (level < 30) && cr.StatBase[ST_UNSPENT_PERKS]!=0) 
-                    //cr.Say(SAY_NETMSG, "|0xCC0000 Remember to choose your Perk! If you don't do that until level 30, it will be lost!");
-				//if(level==30) cr.StatBase[ST_UNSPENT_PERKS]=0;
+				if((level > 24) && (level < 30) && cr.StatBase[ST_UNSPENT_PERKS]!=0) 
+                    cr.Say(SAY_NETMSG, "|0xCC0000 Remember to choose your Perk! If you don't do that until level 30, it will be lost!");
+				if(level==30) cr.StatBase[ST_UNSPENT_PERKS]=0;
             }
             else
                 break;

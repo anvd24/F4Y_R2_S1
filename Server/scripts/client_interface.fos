@@ -458,7 +458,7 @@ void render_iface(uint layer)
         if( mainsc == CLIENT_MAIN_SCREEN_GAME )
         {
             // Most Important Feature Ever Made By Human Race For FOnline Game
-            DrawText( "FOnline: Reloaded", 0, 5, __ScreenWidth-5, 10, 0, FONT_FALLOUT, FT_CENTERR );
+            DrawText( " Welcome @Username  ", 0, 5, __ScreenWidth-5, 10, 0, FONT_FALLOUT, FT_CENTERR );
             string date = DateTimeToString( __FullSecond );
             DrawText( date, 0, 15, __ScreenWidth-5, 10, 0, FONT_FALLOUT, FT_CENTERR );
         }
@@ -538,7 +538,7 @@ void render_iface(uint layer)
 						
                         if(cr.IsDead())
                         {
-                            DrawText("Dead", __MouseX + 15, __MouseY + dy, __ScreenWidth, 20, COLOR_DARK, FONT_FALLOUT, FT_ALIGN | FT_BORDERED);
+                            DrawText("Dead Body", __MouseX + 15, __MouseY + dy, __ScreenWidth, 20, COLOR_DARK, FONT_FALLOUT, FT_ALIGN | FT_BORDERED);
                         }
                         else
                         {
@@ -1373,11 +1373,11 @@ string showPrefix(ItemCl@ it)
 	string result="";
 	if(it.GetType() == ITEM_TYPE_ARMOR || it.GetType()== ITEM_TYPE_WEAPON)
 	{
-		if(it.Val4!=0)	result +="|" + COLOR_SAND + " Unique " + "|" + COLOR_LGREEN + " ";
-		else if(it.Val3!=0)	result +="|" + COLOR_GREEN_RED + " Advanced " + "|" + COLOR_LGREEN + " ";
-		else if(it.Val2!=0)	result +="|" + COLOR_WHITE + " Superior " + "|" + COLOR_LGREEN + " ";
-		else if(it.Val1!=0)	result +="|" + COLOR_LGRAY + " Improved " + "|" + COLOR_LGREEN + " ";
-		else if(it.Val0!=0) result +="|" + COLOR_GRAY + " Quality " + "|" + COLOR_LGREEN + " ";
+		if(it.Val4!=0)	result +="|" + COLOR_SAND + " [T5] " + "|" + COLOR_LGREEN + " ";
+		else if(it.Val3!=0)	result +="|" + COLOR_GREEN_RED + " [T4] " + "|" + COLOR_LGREEN + " ";
+		else if(it.Val2!=0)	result +="|" + COLOR_WHITE + " [T3] " + "|" + COLOR_LGREEN + " ";
+		else if(it.Val1!=0)	result +="|" + COLOR_LGRAY + " [T2] " + "|" + COLOR_LGREEN + " ";
+		else if(it.Val0!=0) result +="|" + COLOR_GRAY + " [T1] " + "|" + COLOR_LGREEN + " ";
 	}
 	return result;
 }

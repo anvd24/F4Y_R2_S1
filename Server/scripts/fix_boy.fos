@@ -861,12 +861,15 @@ bool ReverseItemCustom(Critter& cr, Item& item, bool isMassScience)
         else
             DeleteItem(item);
 
-		cr.AddItem(PID_GUNPOWDER, Random(20, 30));
+		 cr.AddItem(PID_GUNPOWDER, Random(10, 20));
 		 cr.AddItem(PID_GUNPOWDER2, Random(10, 20));
         if(!isMassScience)
             cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
         return true;
     }
+	///
+
+	///
 	case PID_EXPLOSIVE_ROCKET:
     {
         if(item.GetCount() > 1)
@@ -875,8 +878,8 @@ bool ReverseItemCustom(Critter& cr, Item& item, bool isMassScience)
             DeleteItem(item);
 
         cr.AddItem(PID_GUNPOWDER, Random(0, 1)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		//cr.AddItem(PID_METAL_PARTS, Random(0, 4));	//add metal parts
-		//cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
+		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
+		cr.AddItem(PID_PUMP_PARTS, Random(0, 1));	//add junk
         if(!isMassScience)
             cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of gunpowder from this shell.");
         return true;
@@ -889,8 +892,8 @@ bool ReverseItemCustom(Critter& cr, Item& item, bool isMassScience)
             DeleteItem(item);
 
         cr.AddItem(PID_GUNPOWDER2, Random(0, 1)); //add gunpowder PID_GUNPOWDER PID_GUNPOWDER2
-		//cr.AddItem(PID_METAL_PARTS, Random(0, 4));	//add metal parts
-		//cr.AddItem(PID_ELECTRONIC_PARTS, Random(0, 1));	//add electronic parts
+		cr.AddItem(PID_METAL_PARTS, Random(0, 1));	//add metal parts
+		cr.AddItem(PID_ELECTRONIC_PARTS, Random(0, 1));	//add electronic parts
         if(!isMassScience)
             cr.Say(SAY_NETMSG, "You've managed to salvage a fair quantity of advanced gunpowder from this shell.");
         return true;
