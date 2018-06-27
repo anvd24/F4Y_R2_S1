@@ -88,7 +88,7 @@ uint e_Spawn(array<uint>@ values)
 	Item@ item = GetItem(values[0]);
     if(!valid(item))
         return 0;
-	//ClearContainer(item);
+	ClearContainer(item);
 
 	if(Random(0,99)<50)
 		{
@@ -188,9 +188,9 @@ uint e_Spawn(array<uint>@ values)
 		{
 		switch (Random(1,3))
 			{
-			case 1: 	{item.AddItem(PID_BOTTLE_CAPS, 152, 0); break;}
-			case 2: 	{item.AddItem(PID_BOTTLE_CAPS, 173, 0); break;}
-			case 3: 	{item.AddItem(PID_BOTTLE_CAPS, 1674, 0); break;}
+			case 1: 	{item.AddItem(PID_BOTTLE_CAPS, 1520, 0); break;}
+			case 2: 	{item.AddItem(PID_BOTTLE_CAPS, 17300, 0); break;}
+			case 3: 	{item.AddItem(PID_BOTTLE_CAPS, 167400, 0); break;}
 			}
 		}
 
@@ -208,7 +208,7 @@ uint e_SpawnLow(array<uint>@ values)
 	Item@ item = GetItem(values[0]);
     if(!valid(item))
         return 0;
-	//ClearContainer(item);
+	ClearContainer(item);
 
 	if(Random(0,99)<50)
 		{
