@@ -2,7 +2,7 @@
 Version              4
 MaxHexX              202
 MaxHexY              186
-WorkHexX             66
+WorkHexX             71
 WorkHexY             106
 ScriptModule         map_ares
 ScriptFunc           map_init
@@ -19565,5 +19565,19 @@ MapObjType           2
 ProtoId              5621
 MapX                 50
 MapY                 96
+
+MapObjType           1
+ProtoId              367
+MapX                 63
+MapY                 96
+ScriptName           spawner_pvp
+FuncName             locker_Warehouse
+
+MapObjType           1
+ProtoId              369
+MapX                 59
+MapY                 108
+ScriptName           spawner_pvp
+FuncName             locker_Warehouse
 
 
