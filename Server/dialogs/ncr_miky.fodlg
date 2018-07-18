@@ -14,7 +14,7 @@ lang=engl
 1 1000 None 0 #
 2 1010 @
 2 2000 None 0 #
-65506 2010 #
+65506 2010 R _item n PID_IGUANA_ON_A_STICK = 10 R _item n PID_MEAT_ON_A_STICK = 10 R _item n PID_WATERBAG = 10 R _item n PID_BOTTLE_FULL = 10 #
 3 2020 #
 4 2030 D _var p mod_q_meat_jerky = 1 D _item p PID_MEAT_BAG > 0 R _var p mod_q_meat_jerky = 2 R _item p PID_MEAT_BAG - 1 R _param p ST_EXPERIENCE + 720 R _script dialog@r_AddMoney 1 320 #
 5 2040 D _var p q_iguana_pete_message = 1 #
@@ -37,7 +37,8 @@ lang=engl
 9 9000 None 0 @
 10 10000 None 0 #
 0 10010 @
-11 11000 None 0 &
+11 11000 None 0 @
+100 12000 None 0 &
 
 [engl]
 {100}{}{Mikey}
@@ -71,4 +72,5 @@ lang=engl
 {10000}{}{Get outta here!}
 {10010}{}{OOOoooooOOooooooo!}
 {11000}{}{My name is Mike, asshole!}
+{12000}{}{Dialog text}
 
