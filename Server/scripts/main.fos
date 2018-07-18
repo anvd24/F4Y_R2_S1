@@ -2196,7 +2196,7 @@ void critter_idle(Critter& cr)
 		}
 		/////
 		
-		_SetTimeout(cr, TO_WEAKENED, (REAL_MINUTE(60)));
+		_SetTimeout(cr, TO_WEAKENED, (REAL_MINUTE((10 + cr.Stat[ST_ENDURANCE]) + Random(1, cr.Stat[ST_ENDURANCE]))));
     }
 
     // try to heal injuries
