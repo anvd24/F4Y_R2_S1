@@ -139,6 +139,11 @@ import void TryReadBook(Critter& cr, Item& book) from "books";
 import void AddBonuses(Item@ item, string@ crafter) from "item_bonus";
 import uint BonusNumber(Item@ item) from "item_bonus";
 
+import void AffectHunger(Critter& cr, int value) from "hunger";
+import void CapHunger(Critter& cr) from "hunger";
+import void AffectThirst(Critter& cr, int value) from "thirst";
+import void CapThirst(Critter& cr) from "thirst";
+
 import void UpdateDrugs(Critter& cr) from "drugs";
 
 import string IntToIp(int d) from "utils";
@@ -1990,6 +1995,18 @@ void critter_init(Critter& cr, bool firstTime)
                     map.SetData(MAP_DATA_LAST_ENTERED, ELAPSED_TIME);
             }
         }
+		
+		
+		///
+		//if(cr.IsPlayer())
+		//{
+		//AffectHunger(cr, Random(1,5));
+		//AffectThirst(cr, Random(1,5));
+		 //Log("AffectHunger on " + AffectHunger + " ");
+		 //Log("AffectHunger on " + AffectThirst + " ");
+		//}
+		///
+		
         // Clear timeouts if too long (happens when saves got removed)
         for(uint i = TIMEOUT_BEGIN; i <= TIMEOUT_END; i++)
             if(i != TO_BATTLE && cr.Timeout[i] > MAXIMUM_TIMEOUT)
@@ -2111,8 +2128,75 @@ void critter_idle(Critter& cr)
             if(cr.StatBase[ST_CURRENT_HP] > cr.Stat[ST_MAX_LIFE])
                 cr.StatBase[ST_CURRENT_HP] = cr.Stat[ST_MAX_LIFE];
         }
-
+		
+		
+		/*
+	if(!cr.IsDead() && cr.IsPlayer() && cr.Timeout[TO_HEALING] == 0 && cr.Timeout[TO_BATTLE] == 0 && cr.Timeout[TO_WEAKENED] == 0)
+		{
+			if(cr.StatBase[ST_THIRST_LEVEL] < 99)
+			{
+				AffectThirst(cr, (Random(-1,1)));
+				CapThirst(cr);
+				//Log("AffectThirst on " + AffectThirst + " and " + CapThirst + " ");
+				if(cr.StatBase[ST_THIRST_LEVEL] > 50)
+					{
+						cr.Say(SAY_NETMSG,"ST_THIRST_LEVEL UP");
+						cr.Say(SAY_EMOTE_ON_HEAD,"NEED WATER");
+					}
+			}
+			
+			if(cr.StatBase[ST_HUNGER_LEVEL] < 99) 
+				{
+					AffectHunger(cr, (Random(-1,1)));
+					CapHunger(cr);
+					//Log("AffectHunger on " + AffectHunger + " and " + CapHunger + " ");
+			if(cr.StatBase[ST_HUNGER_LEVEL] > 50)
+				{
+					cr.Say(SAY_NETMSG,"ST_HUNGER_LEVEL UP");
+					cr.Say(SAY_EMOTE_ON_HEAD,"NEED SOME FOOD");
+				}
+				}
+		}
+		*/
+		
         _SetTimeout(cr, TO_HEALING, HEALING_TIMEOUT(cr));
+		//_SetTimeout(cr, TO_WEAKENED, WEAKENED_TIMEOUT(cr));
+    }
+	
+	    // Healing
+    if(cr.Timeout[TO_WEAKENED] == 0)
+    {
+        	
+		/////
+	if(!cr.IsDead() && cr.IsPlayer() && cr.Timeout[TO_BATTLE] == 0 )
+		{
+			if(cr.StatBase[ST_THIRST_LEVEL] < 110)
+			{
+				AffectThirst(cr, (Random(1,15)));
+				CapThirst(cr);
+				//Log("AffectThirst on " + AffectThirst + " and " + CapThirst + " ");
+				if(cr.StatBase[ST_THIRST_LEVEL] > 39)
+					{
+						cr.Say(SAY_NETMSG,"The level of thirst increased to " + cr.StatBase[ST_THIRST_LEVEL] + " points. It's worth finding some water for me. ");
+						cr.Say(SAY_EMOTE_ON_HEAD,"I need find and drink some water...");
+					}
+			}
+			
+			if(cr.StatBase[ST_HUNGER_LEVEL] < 110) 
+				{
+					AffectHunger(cr, (Random(1,15)));
+					CapHunger(cr);
+					//Log("AffectHunger on " + AffectHunger + " and " + CapHunger + " ");
+			if(cr.StatBase[ST_HUNGER_LEVEL] > 39)
+				{
+					cr.Say(SAY_NETMSG,"The level of hunger increased to " + cr.StatBase[ST_HUNGER_LEVEL] + " points. I need to look for supplies, without food will not last long. ");
+					cr.Say(SAY_EMOTE_ON_HEAD,"I need find and eat something...");
+				}
+				}
+		}
+		/////
+		
+		_SetTimeout(cr, TO_WEAKENED, (REAL_MINUTE(60)));
     }
 
     // try to heal injuries

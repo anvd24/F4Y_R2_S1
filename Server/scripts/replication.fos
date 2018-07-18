@@ -25,6 +25,12 @@ import void DropDrugsEffectsHinkley(Critter& cr) from "drugs";
 import void DropPoison(Critter& cr) from "poison";
 // import void DropRadiation(Critter& cr) from "radiation";
 import void CapRadiation(Critter& cr) from "radiation";
+import void DropHunger(Critter& cr) from "hunger";
+import void DropThirst(Critter& cr) from "thirst";
+import void AffectHunger(Critter& cr, int value) from "hunger";
+import void CapHunger(Critter& cr) from "hunger";
+import void AffectThirst(Critter& cr, int value) from "thirst";
+import void CapThirst(Critter& cr) from "thirst";
 import Map@ GetRoomPosition(uint PlayerId, uint16& out hx, uint16& out hy) from "rooms";
 import bool IsInsideArena(Critter&) from "arena";
 import bool IsDeadInsideLobby(Critter&) from "arena";
@@ -574,7 +580,7 @@ void ReplicateCritter(Critter& cr)   // Export
 		//{
 			//_SetTimeout(cr, TO_REPLICATION, REAL_MINUTE(3600)); // 2 days replication timer
 			cr.ToLife();
-			Log( "SOME ONE IS BACK TO LIFE  " + cr.Name + "  With  (" + cr.Id + ")  was killed, and now is respawn ON = (map " + map.Id + ")" );
+			//Log( "SOME ONE IS BACK TO LIFE  " + cr.Name + "  With  (" + cr.Id + ")  was killed, and now is respawn ON = (map " + map.Id + ")" );
 		//}
 		//else 
 		//{
@@ -596,6 +602,10 @@ void ReplicateCritter(Critter& cr)   // Export
     CapRadiation(cr);
     // DropRadiation(cr);
     // DropDrugEffects(cr);
+	//
+	DropHunger(cr);
+	DropThirst(cr);
+	//
     cr.DropTimers();
     // ClearIllegalFlags(cr); // Clear illegal flags in all towns
     uint toVote = cr.Timeout[TO_KARMA_VOTING];
@@ -603,6 +613,15 @@ void ReplicateCritter(Critter& cr)   // Export
     _SetTimeout(cr, TO_KARMA_VOTING, toVote);
 	//_SetTimeout(cr, TO_WEAKENED, REAL_MINUTE(12));
 	_SetTimeout(cr, TO_WEAKENED, REAL_MINUTE(Random(1,20)));
+		if(cr.IsPlayer())
+				{
+				AffectHunger(cr, Random(1,3));
+				AffectThirst(cr, Random(1,3));
+				//cr.StatBase[MODE_GECK]=1;
+				//cr.ModeBase[MODE_GECK]=1;				
+				//Log ("AddHUNGER&THURST EFFECT TO REPLICANT AFTER DEATH");
+				Log ("PLAYER "+cr.Name+" RESURECTED ");
+				}
 
     #ifdef __TEST__
     cr.AddItem(PID_RADIO, 1);

@@ -252,6 +252,8 @@
 {448}{}{Oversize}
 {449}{}{Your turn VALUE}
 {450}{}{Turn-based}
+{453}{}{HUNGER}
+{454}{}{THIRSTY}
 
 ####################################################################################################################################
 #
@@ -1508,7 +1510,7 @@
 # TO_SK_STEAL, timeouts
 {102351}{}{Steal}
 # TO_WEAKENED
-# {102361}{}{Weakened}
+# {102361}{}{Vitality}
 # TO_FIXBOY
 {102371}{}{Crafting}
 # 102380
@@ -1519,7 +1521,7 @@
 # TO_REMOVE_FROM_GAME, timeouts
 # {102401}{}{Exit game}
 # TO_REPLICATION, timeouts
-{102411}{}{Replication}
+{102411}{}{Your body will be found through}
 # TO_KARMA_VOTING, timeouts
 #{102421}{}{Voting}
 # TO_GATHERING
@@ -2134,6 +2136,12 @@
 # DAMAGE_LEFT_LEG, damages
 {105061}{}{Crippled Left Leg}
 {105062}{}{Your character has a crippled left leg.}
+#define DAMAGE_THIRST							 (507)
+{105071}{}{The Thirst}
+{105072}{}{Your character has a thirst and die.}
+#define DAMAGE_HUNGER							 (508)
+{105081}{}{The Hunger}
+{105082}{}{Your character has a hunger and can die.}
 
 
 ####################################################################################################################################

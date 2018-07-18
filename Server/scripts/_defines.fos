@@ -411,6 +411,8 @@
 #define CTE_AGE                                  (8)
 #define CTE_CUTSCENE                             (9)
 #define CTE_SCHEDULE                             (10)
+#define CTE_THIRST								 (11)
+#define CTE_HUNGER								 (12)
 // Drugs time events                40 (PID_STIMPAK) .. 1000
 #define CTE_CHEAT_AURA                           (1337)
 
@@ -575,6 +577,13 @@
 #define ST_FIXBOY_COUNTER 			(181)
 #define ST_FIXBOY_FILTER 			(182)
 #define ST_FIXBOY_FIXALL 			(183)
+// for thurst and hunger system
+#define ST_THIRST					(184)
+#define ST_THIRST_LEVEL				(185)
+#define ST_HUNGER					(186)
+#define ST_HUNGER_LEVEL				(187)
+#define ST_HUNGER_RESIST			(188)
+#define ST_THIRST_RESIST			(189)
 
 /// Skills
 #define SKILL_BEGIN                              (__SkillBegin)
@@ -882,6 +891,8 @@
 #define DAMAGE_LEFT_ARM                          (504) // Used in engine
 #define DAMAGE_RIGHT_LEG                         (505) // Used in engine
 #define DAMAGE_LEFT_LEG                          (506) // Used in engine
+#define DAMAGE_THIRST							 (507)
+#define DAMAGE_HUNGER							 (508)
 // 507..509
 
 /// Modes
@@ -1655,7 +1666,7 @@
 # pragma crdata "Perk 300 461"
 # pragma crdata "Addiction 470 478"
 # pragma crdata "Karma 480 496"
-# pragma crdata "Damage 500 506"
+# pragma crdata "Damage 500 508"
 # pragma crdata "Mode 510 549"
 # pragma crdata "Trait 550 565"
 # pragma crdata "Profession 570 580"

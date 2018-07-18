@@ -139,7 +139,7 @@ void InitializeGame()                  // Export
     __KarmaBegin = 480;
     __KarmaEnd = 496;
     __DamageBegin = 500;
-    __DamageEnd = 506;
+    __DamageEnd = 508;
     __TraitBegin = 550;
     __TraitEnd = 565;
     __ReputationBegin = 600;

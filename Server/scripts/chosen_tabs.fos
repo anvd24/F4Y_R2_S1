@@ -83,6 +83,40 @@ void DrawChosenTabs() // Export
         LevelUp = false;
 
     CurTab = 0;
+	
+			
+//if(chosen.Damage[DAMAGE_THIRST] != 0)
+	if(chosen.Stat[ST_THIRST_LEVEL] != 0)
+    {
+        string ex = "";
+        uint   color = COLOR_DRED, percent = 0;
+
+			if((percent = chosen.Stat[ST_THIRST_LEVEL]) > 0)
+        {
+            ex = "Thirst level: " + percent + "%";
+            color = PercentColor(percent);
+        }
+
+        DrawTab(GetMsgStr(TEXTMSG_GAME, STR_THIRSTY_TITLE), color, ex);
+    }
+		
+
+		
+//if(chosen.Damage[DAMAGE_HUNGER] != 0)
+if(chosen.Stat[ST_HUNGER_LEVEL] != 0)	
+    {
+        string ex = "";
+        uint   color = COLOR_DRED, percent = 0;
+
+			if((percent = chosen.Stat[ST_HUNGER_LEVEL]) > 0)
+        {
+            ex = "Hunger level: " + percent + "%";
+            color = PercentColor(percent);
+        }
+
+        DrawTab(GetMsgStr(TEXTMSG_GAME, STR_HUNGER_TITLE), color, ex);
+    }
+		
 
     if(chosen.Mode[MODE_HIDE] != 0)
         DrawTab(GetMsgStr(TEXTMSG_GAME, STR_HIDEMODE_TITLE), COLOR_DGREEN);

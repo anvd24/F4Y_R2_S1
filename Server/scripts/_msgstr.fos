@@ -238,6 +238,8 @@
 #define STR_TURN_BASED_TITLE            (450)
 #define STR_DRUNK						(451)
 #define STR_DRUGGED						(452)
+#define STR_HUNGER_TITLE				(453)
+#define STR_THIRSTY_TITLE				(454)
 
 // Radio
 #define STR_RADIO_MAIN                  (455)
@@ -266,6 +268,7 @@
 #define STR_RADIO_ENCRYPTED_BEGIN		(570)
 #define STR_RADIO_ENCRYPTED_ENDED		(571)
 #define STR_RADIO_ENCRYPTIONKEY_CHANGED (572)
+
 
 // Barter
 #define STR_BARTER_GOOD_OFFER           (480)

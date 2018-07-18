@@ -182,6 +182,10 @@
 #define STR_OVERVOLUME_TITLE            (448)
 #define STR_YOU_TURN_TITLE              (449)
 #define STR_TURN_BASED_TITLE            (450)
+#define STR_DRUNK						(451)
+#define STR_DRUGGED						(452)
+#define STR_HUNGER_TITLE				(453)
+#define STR_THIRSTY_TITLE				(454)
 
 // Radio
 #define STR_RADIO_MAIN                  (455)

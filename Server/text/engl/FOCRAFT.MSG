@@ -137,7 +137,7 @@
 {124}{}{PID_DYNAMITE@A high explosive, consisting of nitroglycerin mixed with the absorbent substance kiselguhr. Includes a timer.@PE_PROFESSION_DEMOLITION_EXPERT 2@PE_PROFESSION_DEMOLITION_EXPERT 2@PID_GUNPOWDER2 6&PID_DETONATOR_PARTS 1@PID_ADVANCED_BENCH 1@PID_DYNAMITE 1@exp 300 script fix_boy@fix_Blueprint}
 {125}{}{PID_PLASTIC_EXPLOSIVES@A chunk of Cordex, a military brand of plastic explosives. Highly stable, very destructive. Includes a timer.@PE_PROFESSION_DEMOLITION_EXPERT 2@PE_PROFESSION_DEMOLITION_EXPERT 2@PID_GUNPOWDER2 12&PID_DETONATOR_PARTS 1@PID_ADVANCED_BENCH 1@PID_PLASTIC_EXPLOSIVES 1@exp 450 script fix_boy@fix_Blueprint}
 //The Meds
-{126}{}{PID_ANTIDOTE@A bottle containing a home-brewed antidote for poison. A milky liquid with floating pieces of radscorpion flesh.@PE_PROFESSION_DOCTOR 1@PE_PROFESSION_DOCTOR 1@PID_SCORPION_TAIL 5@@PID_ANTIDOTE 1@exp 75 script fix_boy@fix_Generic}
+{126}{}{PID_ANTIDOTE@A bottle containing a home-brewed antidote for poison. A milky liquid with floating pieces of radscorpion flesh.@@@PID_SCORPION_TAIL 5@@PID_ANTIDOTE 1@exp 75 script fix_boy@fix_Generic}
 {127}{}{PID_WEAK_HEALING_POWDER@A weak low-tech healing agent. It's not quite a stimpak, but it'll do.@@@PID_XANDER_ROOT 1@@PID_WEAK_HEALING_POWDER 1@exp 15 script fix_boy@fix_Generic}
 {128}{}{PID_HEALING_POWDER@A low-tech healing agent. It's not quite a stimpak, but it'll do.@@@PID_XANDER_ROOT 1&PID_BROC_FLOWER 1@@PID_HEALING_POWDER 1@exp 50 script fix_boy@fix_Generic}
 //
