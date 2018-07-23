@@ -1870,26 +1870,82 @@ void critter_init(Critter& cr, bool firstTime)
                 case CRTYPE_BRAHMIN:
                 {
                     _AddTrophy(cr, PID_BRAHMIN_HIDE_TROPHY, 1, trophies);
-					_AddTrophy(cr, PID_MEAT, Random(6,12), trophies);
+					_AddTrophy(cr, PID_MEAT, Random(4,8), trophies);
+					//_AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,10), trophies);
                     break;
                 }
                 case CRTYPE_SCORPION:
                 case CRTYPE_SCORPION_SMALL:
+					_AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,5), trophies);
                     _AddTrophy(cr, PID_SCORPION_TAIL, 1, trophies);
-					_AddTrophy(cr, PID_MEAT, Random(0,1), trophies);
+					_AddTrophy(cr, PID_MEAT, Random(1,4), trophies);
                     break;
                 case CRTYPE_GECKO_SMALL:
                     _AddTrophy(cr, PID_GECKO_PELT, 1, trophies);
-					_AddTrophy(cr, PID_MEAT, Random(1,2), trophies);
+					_AddTrophy(cr, PID_MEAT, 1, trophies);
+					_AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,5), trophies);
                     break;
                 case CRTYPE_GECKO:
                     _AddTrophy(cr, PID_GOLDEN_GECKO_PELT, 1, trophies);
-					_AddTrophy(cr, PID_MEAT, Random(3,6), trophies);
+					_AddTrophy(cr, PID_MEAT, Random(1,4), trophies);
+					_AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,5), trophies);
                     break;
                 case CRTYPE_GECKO_FIRE:
                     _AddTrophy(cr, PID_FIREGECKO_PELT, 1, trophies);
-					_AddTrophy(cr, PID_MEAT, Random(3,6), trophies);
+					_AddTrophy(cr, PID_MEAT, Random(1,4), trophies);
+					_AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,5), trophies);
                     break;
+				//new trophies - start
+				case CRTYPE_SPORE_PLANT:
+					_AddTrophy(cr, PID_FIBER, Random(0,4), trophies);
+					_AddTrophy(cr, PID_TOBACCO, Random(0,4), trophies);
+					
+                    break;
+					//DOG loot
+				case CRTYPE_DOG:
+					_AddTrophy(cr, PID_MEAT, Random(0,1), trophies);
+                    break;
+					//MOLERAT loot
+				case CRTYPE_MOLERAT:
+                    _AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,3), trophies);
+					_AddTrophy(cr, PID_MEAT, Random(0,1), trophies);
+                    break;
+					//FLOATER loot - alloy
+				case CRTYPE_FLOATER:
+                    _AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,5), trophies);
+					_AddTrophy(cr, PID_ALLOYS, Random(0,1), trophies);
+                    break;
+					//CRTYPE_CENTAUR loot - alloy
+				case CRTYPE_CENTAUR:
+                    //_AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,50), trophies);
+					_AddTrophy(cr, PID_METAL_PARTS, Random(0,1), trophies);
+					_AddTrophy(cr, PID_ALLOYS, Random(0,1), trophies);
+					_AddTrophy(cr, PID_PUMP_PARTS, Random(0,1), trophies);
+                    break;
+					//CRTYPE_DEATHCLAW loot - alloy
+				case CRTYPE_DEATHCLAW_SMALL:
+					//_AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,40), trophies);
+					_AddTrophy(cr, PID_MEAT, Random(0,1), trophies);
+					_AddTrophy(cr, PID_FIBER, Random(0,1), trophies);
+                    break;
+				case CRTYPE_DEATHCLAW:
+                    _AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,100), trophies);
+					_AddTrophy(cr, PID_MEAT, Random(0,10), trophies);
+					_AddTrophy(cr, PID_FIBER, Random(0,20), trophies);
+					_AddTrophy(cr, PID_GOLD_NUGGET, Random(0,1), trophies);
+                    break;
+			       //CRTYPE_PIGRAT loot - alloy
+				case CRTYPE_PIGRAT:
+                    _AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,3), trophies);
+					_AddTrophy(cr, PID_MEAT, Random(0,1), trophies);
+                    break;
+				case CRTYPE_ALIEN:
+                    _AddTrophy(cr, PID_BOTTLE_CAPS, Random(0,50), trophies);
+					_AddTrophy(cr, PID_METAL_PARTS2, Random(0,1), trophies);
+					_AddTrophy(cr, PID_ALLOYS2, Random(0,1), trophies);
+                    break;
+					//new trophies -end
+					
                 }
                 for(uint t = 0, tlen = trophies.length(); t < tlen; t++)
                 {
