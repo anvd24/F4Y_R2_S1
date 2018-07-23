@@ -12,16 +12,14 @@ lang=engl
 3 2010 R _script dialog_altruist@r_Give 1 0 #
 3 2020 R _script dialog_altruist@r_Give 1 1 #
 4 2030 #
-3 2040 R _item p PID_COMBAT_ARMOR_MK_II + 1 R _item p PID_COMBAT_HELMET_MK_II + 1 #
-3 2050 R _item p PID_ADVANCED_POWER_ARMOR_MK2 + 1 R _item p PID_APA_HELMET_MK2 + 1 #
-3 2060 R _item p PID_ENCLAVE_COMBAT_ARMOR + 1 R _item p PID_ENCLAVE_COMBAT_HELMET + 1 #
-3 2070 R _item p PID_NCR_ARMOR + 1 R _item p PID_NCR_HELMET + 1 #
-500 2080 D _param p ST_UNSPENT_SKILL_POINTS > 0 #
-3 2090 R _item p PID_OIL_CAN + 10 #
-3 2100 D _param p ST_STRENGTH > 99 R _script dialog_altruist@r_Give 1 2 #
-3 2110 R _item p PID_BOTTLE_CAPS + 100000 #
-3 2120 R _script dialog_altruist@r_Give 1 4 #
-3 2130 R _script dialog_altruist@r_Give 1 3 @
+3 2040 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_ENCLAVE_COMBAT_ARMOR + 1 R _item p PID_ENCLAVE_COMBAT_HELMET + 1 #
+3 2050 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_NCR_ARMOR + 1 R _item p PID_NCR_HELMET + 1 #
+3 2060 D _item p PID_BOTTLE_CAPS > 99999 R _script dialog@r_RemoveMoney 1 100000 R _item p PID_OIL_CAN + 10 #
+3 2070 D _param p MODE_INVULNERABLE > 0 R _item p PID_BOTTLE_CAPS + 100000 #
+3 2080 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 4 #
+3 2090 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 3 #
+500 2100 D _param p ST_UNSPENT_SKILL_POINTS > 0 #
+600 2110 D _item p PID_BOTTLE_CAPS > 999 @
 3 3000 None 0 @
 4 4000 None 0 #
 3 4010 D _script dialog_altruist@d_CanTakePerk 1 301 R _script dialog_altruist@r_GivePerk 1 301 #
@@ -66,7 +64,16 @@ lang=engl
 3 4400 D _script dialog_altruist@d_CanTakePerk 1 461 R _script dialog_altruist@r_GivePerk 1 461 @
 500 5000 None 0 #
 3 5010 R _param p ST_UNSPENT_SKILL_POINTS = 0 #
-65505 5020 &
+65505 5020 @
+600 6000 None 0 #
+600 6010 D _item p PID_BOTTLE_CAPS > 9999 R _script dialog@r_RemoveMoney 1 10000 R _param p ST_UNSPENT_SKILL_POINTS + 10 #
+600 6020 D _item p PID_BOTTLE_CAPS > 29999 R _script dialog@r_RemoveMoney 1 30000 R _param p ST_UNSPENT_SKILL_POINTS + 30 #
+600 6030 D _item p PID_BOTTLE_CAPS > 49999 R _script dialog@r_RemoveMoney 1 50000 R _param p ST_UNSPENT_SKILL_POINTS + 50 #
+600 6040 D _item p PID_BOTTLE_CAPS > 69999 R _script dialog@r_RemoveMoney 1 70000 R _param p ST_UNSPENT_SKILL_POINTS + 70 #
+600 6050 D _item p PID_BOTTLE_CAPS > 79999 R _script dialog@r_RemoveMoney 1 80000 R _param p ST_UNSPENT_SKILL_POINTS + 80 #
+600 6060 D _item p PID_BOTTLE_CAPS > 98999 R _script dialog@r_RemoveMoney 1 99000 R _param p ST_UNSPENT_SKILL_POINTS + 99 #
+0 6070 #
+65505 6080 &
 
 [engl]
 {100}{}{Altruist}
@@ -74,20 +81,18 @@ lang=engl
 {210}{}{He will give you levels and stuff.}
 {1000}{}{Predialogue installations}
 {1010}{}{Answer text}
-{2000}{}{Hello, tester.}
+{2000}{}{Welcome, traveler. What brings you to me? Oh yeah, if you're interested in the whole range of my services, come when you have more than 100 thousand covers on your hands...}
 {2010}{}{Hello, now give me a level.}
 {2020}{}{Right, give me three levels.}
 {2030}{}{Give me a Support Perk that I am eligible to take.}
-{2040}{}{Give Me Armor CAmk2}
-{2050}{}{Give The Armor APAMK2}
-{2060}{}{Give The Armor ENCLAVE}
-{2070}{}{Give The Armor NCR}
-{2080}{}{Remove USP}
-{2090}{}{Give me 10 OilCans}
-{2100}{}{I will now receive 100000 wastebucks.}
-{2110}{}{This is a robbery! Gimme 100.000 caps, NOW!}
-{2120}{}{Remove my drug effects, pretty please.}
-{2130}{}{I humbly suggest clearing all of my reputations.}
+{2040}{}{Buy Enclave Armor Set}
+{2050}{}{Buy NCR Armor Set}
+{2060}{}{Buy 10 OilCans}
+{2070}{}{[GM-Option] Gimme 100.000 caps.}
+{2080}{}{Remove my drug effects, pretty please.}
+{2090}{}{I humbly suggest clearing all of my reputations.}
+{2100}{}{Remove USP}
+{2110}{}{Want buy some Skill Points}
 {3000}{}{Yes.}
 {4000}{}{Which one?}
 {4010}{}{@msg game 103011@}
@@ -133,4 +138,13 @@ lang=engl
 {5000}{}{Remove SP points}
 {5010}{}{Do it}
 {5020}{}{Not need it}
+{6000}{}{Gain Some SP points - 1 point cost 1000 caps - try to calculate. How much you need?}
+{6010}{}{10 SP}
+{6020}{}{30 SP}
+{6030}{}{50 SP}
+{6040}{}{70 SP}
+{6050}{}{80 SP}
+{6060}{}{99 SP}
+{6070}{}{Close Dialoge}
+{6080}{}{Back to prv Dialog}
 
