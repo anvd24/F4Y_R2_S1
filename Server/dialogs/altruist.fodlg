@@ -9,17 +9,17 @@ lang=engl
 1 1000 None 0 #
 2 1010 @
 2 2000 None 0 #
-3 2010 R _script dialog_altruist@r_Give 1 0 #
-3 2020 R _script dialog_altruist@r_Give 1 1 #
-4 2030 #
-3 2040 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_ENCLAVE_COMBAT_ARMOR + 1 R _item p PID_ENCLAVE_COMBAT_HELMET + 1 #
-3 2050 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_NCR_ARMOR + 1 R _item p PID_NCR_HELMET + 1 #
-3 2060 D _item p PID_BOTTLE_CAPS > 99999 R _script dialog@r_RemoveMoney 1 100000 R _item p PID_OIL_CAN + 10 #
-3 2070 D _param p MODE_INVULNERABLE > 0 R _item p PID_BOTTLE_CAPS + 100000 #
-3 2080 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 4 #
-3 2090 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 3 #
-500 2100 D _param p ST_UNSPENT_SKILL_POINTS > 0 #
-600 2110 D _item p PID_BOTTLE_CAPS > 999 @
+3 2010 D _item p PID_BOTTLE_CAPS > 99999 R _script dialog@r_RemoveMoney 1 100000 R _script dialog_altruist@r_Give 1 0 #
+3 2020 D _item p PID_BOTTLE_CAPS > 299999 R _script dialog@r_RemoveMoney 1 300000 R _script dialog_altruist@r_Give 1 1 #
+4 2030 D _item p PID_BOTTLE_CAPS > 399999 R _script dialog@r_RemoveMoney 1 400000 #
+3 2040 D _item p PID_BOTTLE_CAPS > 99999 R _script dialog@r_RemoveMoney 1 100000 R _item p PID_OIL_CAN + 10 #
+3 2050 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_ENCLAVE_COMBAT_ARMOR + 1 R _item p PID_ENCLAVE_COMBAT_HELMET + 1 #
+3 2060 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_NCR_ARMOR + 1 R _item p PID_NCR_HELMET + 1 #
+3 2070 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 4 #
+3 2080 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 3 #
+500 2090 D _param p ST_UNSPENT_SKILL_POINTS > 0 #
+600 2100 D _item p PID_BOTTLE_CAPS > 999 #
+3 2110 D _param p ST_STRENGTH > 99 R _item p PID_BOTTLE_CAPS + 100000 @
 3 3000 None 0 @
 4 4000 None 0 #
 3 4010 D _script dialog_altruist@d_CanTakePerk 1 301 R _script dialog_altruist@r_GivePerk 1 301 #
@@ -66,12 +66,12 @@ lang=engl
 3 5010 R _param p ST_UNSPENT_SKILL_POINTS = 0 #
 65505 5020 @
 600 6000 None 0 #
-600 6010 D _item p PID_BOTTLE_CAPS > 9999 R _script dialog@r_RemoveMoney 1 10000 R _param p ST_UNSPENT_SKILL_POINTS + 10 #
-600 6020 D _item p PID_BOTTLE_CAPS > 29999 R _script dialog@r_RemoveMoney 1 30000 R _param p ST_UNSPENT_SKILL_POINTS + 30 #
-600 6030 D _item p PID_BOTTLE_CAPS > 49999 R _script dialog@r_RemoveMoney 1 50000 R _param p ST_UNSPENT_SKILL_POINTS + 50 #
-600 6040 D _item p PID_BOTTLE_CAPS > 69999 R _script dialog@r_RemoveMoney 1 70000 R _param p ST_UNSPENT_SKILL_POINTS + 70 #
-600 6050 D _item p PID_BOTTLE_CAPS > 79999 R _script dialog@r_RemoveMoney 1 80000 R _param p ST_UNSPENT_SKILL_POINTS + 80 #
-600 6060 D _item p PID_BOTTLE_CAPS > 98999 R _script dialog@r_RemoveMoney 1 99000 R _param p ST_UNSPENT_SKILL_POINTS + 99 #
+3 6010 D _item p PID_BOTTLE_CAPS > 9999 R _script dialog@r_RemoveMoney 1 10000 R _param p ST_UNSPENT_SKILL_POINTS + 10 #
+3 6020 D _item p PID_BOTTLE_CAPS > 29999 R _script dialog@r_RemoveMoney 1 30000 R _param p ST_UNSPENT_SKILL_POINTS + 30 #
+3 6030 D _item p PID_BOTTLE_CAPS > 49999 R _script dialog@r_RemoveMoney 1 50000 R _param p ST_UNSPENT_SKILL_POINTS + 50 #
+3 6040 D _item p PID_BOTTLE_CAPS > 69999 R _script dialog@r_RemoveMoney 1 70000 R _param p ST_UNSPENT_SKILL_POINTS + 70 #
+3 6050 D _item p PID_BOTTLE_CAPS > 79999 R _script dialog@r_RemoveMoney 1 80000 R _param p ST_UNSPENT_SKILL_POINTS + 80 #
+3 6060 D _item p PID_BOTTLE_CAPS > 98999 R _script dialog@r_RemoveMoney 1 99000 R _param p ST_UNSPENT_SKILL_POINTS + 99 #
 0 6070 #
 65505 6080 &
 
@@ -81,18 +81,18 @@ lang=engl
 {210}{}{He will give you levels and stuff.}
 {1000}{}{Predialogue installations}
 {1010}{}{Answer text}
-{2000}{}{Welcome, traveler. What brings you to me? Oh yeah, if you're interested in the whole range of my services, come when you have more than 100 thousand covers on your hands...}
-{2010}{}{Hello, now give me a level.}
-{2020}{}{Right, give me three levels.}
-{2030}{}{Give me a Support Perk that I am eligible to take.}
-{2040}{}{Buy Enclave Armor Set}
-{2050}{}{Buy NCR Armor Set}
-{2060}{}{Buy 10 OilCans}
-{2070}{}{[GM-Option] Gimme 100.000 caps.}
-{2080}{}{Remove my drug effects, pretty please.}
-{2090}{}{I humbly suggest clearing all of my reputations.}
-{2100}{}{Remove USP}
-{2110}{}{Want buy some Skill Points}
+{2000}{}{Welcome, traveler. What brings you to me? Oh yeah, if you're interested in the whole range of my services, come when you have more than 100 thousand caps on your hands...}
+{2010}{}{[100k]  + I level}
+{2020}{}{[300k]  + III levels.}
+{2030}{}{[400k] -  Support Perk that I am eligible to take.}
+{2040}{}{[100k] - Buy 10 OilCans.}
+{2050}{}{[20k] -  Enclave Armor Set.}
+{2060}{}{[20k] - NCR Armor Set.}
+{2070}{}{[2k] - Remove drug effects.}
+{2080}{}{[2k] - I humbly suggest clearing all of my reputations.}
+{2090}{}{[FREE] - Remove USP}
+{2100}{}{Want buy some Skill Points}
+{2110}{}{[GM-Option] Gimme 100.000 caps.}
 {3000}{}{Yes.}
 {4000}{}{Which one?}
 {4010}{}{@msg game 103011@}

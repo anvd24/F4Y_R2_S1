@@ -1706,6 +1706,18 @@ void ClearContainer(Item@ container)
         DeleteItem(items[i]);
 }
 
+/** 
+ * 	Deletes last 10 items all items in specified container.
+ * @param container Handle to target container.
+ */
+void ClearContainerTenLeft(Item@ container)
+{
+    array<Item@> items;
+    uint         itemCount = container.GetItems(0, items);
+    for(uint i = 10; i < itemCount; i++)
+        DeleteItem(items[i]);
+}
+
 /**
  * Move all items from a critter to a subcontainer of a container.
  * @param crFrom The critter which items are moved from.
