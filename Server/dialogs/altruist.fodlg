@@ -7,94 +7,105 @@ lang=engl
 [dialog]
 &
 1 1000 None 0 #
-2 1010 @
+2 1010 D _item p PID_BOTTLE_CAPS > 99999 #
+666 1020 D _item p PID_BOTTLE_CAPS < 100000 @
 2 2000 None 0 #
-3 2010 D _item p PID_BOTTLE_CAPS > 99999 R _script dialog@r_RemoveMoney 1 100000 R _script dialog_altruist@r_Give 1 0 #
-3 2020 D _item p PID_BOTTLE_CAPS > 299999 R _script dialog@r_RemoveMoney 1 300000 R _script dialog_altruist@r_Give 1 1 #
-4 2030 D _item p PID_BOTTLE_CAPS > 399999 R _script dialog@r_RemoveMoney 1 400000 #
+3 2010 D _item p PID_BOTTLE_CAPS > 9999 D _param p ST_LEVEL < 24 R _script dialog@r_RemoveMoney 1 10000 R _script dialog_altruist@r_Give 1 0 #
+3 2020 D _item p PID_BOTTLE_CAPS > 29999 D _param p ST_LEVEL < 24 R _script dialog@r_RemoveMoney 1 30000 R _script dialog_altruist@r_Give 1 1 #
+4 2030 D _item p PID_BOTTLE_CAPS > 39999 #
 3 2040 D _item p PID_BOTTLE_CAPS > 99999 R _script dialog@r_RemoveMoney 1 100000 R _item p PID_OIL_CAN + 10 #
-3 2050 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_ENCLAVE_COMBAT_ARMOR + 1 R _item p PID_ENCLAVE_COMBAT_HELMET + 1 #
-3 2060 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_NCR_ARMOR + 1 R _item p PID_NCR_HELMET + 1 #
-3 2070 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 4 #
-3 2080 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 3 #
-500 2090 D _param p ST_UNSPENT_SKILL_POINTS > 0 #
+3 2050 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_BROTHERHOOD_COMBAT_ARMOR + 1 R _item p PID_BROTHERHOOD_HELMET + 1 #
+3 2060 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_ENCLAVE_COMBAT_ARMOR + 1 R _item p PID_ENCLAVE_COMBAT_HELMET + 1 #
+3 2070 D _item p PID_BOTTLE_CAPS > 19999 R _script dialog@r_RemoveMoney 1 20000 R _item p PID_NCR_ARMOR + 1 R _item p PID_NCR_HELMET + 1 #
+3 2080 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 4 #
+3 2090 D _item p PID_BOTTLE_CAPS > 1999 R _script dialog@r_RemoveMoney 1 2000 R _script dialog_altruist@r_Give 1 3 #
 600 2100 D _item p PID_BOTTLE_CAPS > 999 #
-3 2110 D _param p ST_STRENGTH > 99 R _item p PID_BOTTLE_CAPS + 100000 @
+3 2110 D _param p ST_STRENGTH > 99 R _item p PID_BOTTLE_CAPS + 100000 #
+500 2120 D _param p ST_UNSPENT_SKILL_POINTS > 0 #
+700 2130 D _item p PID_DOGTAGS > 0 @
 3 3000 None 0 @
 4 4000 None 0 #
-3 4010 D _script dialog_altruist@d_CanTakePerk 1 301 R _script dialog_altruist@r_GivePerk 1 301 #
-3 4020 D _script dialog_altruist@d_CanTakePerk 1 308 R _script dialog_altruist@r_GivePerk 1 308 #
-3 4030 D _script dialog_altruist@d_CanTakePerk 1 312 R _script dialog_altruist@r_GivePerk 1 312 #
-3 4040 D _script dialog_altruist@d_CanTakePerk 1 314 R _script dialog_altruist@r_GivePerk 1 314 #
-3 4050 D _script dialog_altruist@d_CanTakePerk 1 319 R _script dialog_altruist@r_GivePerk 1 319 #
-3 4060 D _script dialog_altruist@d_CanTakePerk 1 331 R _script dialog_altruist@r_GivePerk 1 331 #
-3 4070 D _script dialog_altruist@d_CanTakePerk 1 332 R _script dialog_altruist@r_GivePerk 1 332 #
-3 4080 D _script dialog_altruist@d_CanTakePerk 1 334 R _script dialog_altruist@r_GivePerk 1 334 #
-3 4090 D _script dialog_altruist@d_CanTakePerk 1 335 R _script dialog_altruist@r_GivePerk 1 335 #
-3 4100 D _script dialog_altruist@d_CanTakePerk 1 338 R _script dialog_altruist@r_GivePerk 1 338 #
-3 4110 D _script dialog_altruist@d_CanTakePerk 1 342 R _script dialog_altruist@r_GivePerk 1 342 #
-3 4120 D _script dialog_altruist@d_CanTakePerk 1 344 R _script dialog_altruist@r_GivePerk 1 344 #
-3 4130 D _script dialog_altruist@d_CanTakePerk 1 346 R _script dialog_altruist@r_GivePerk 1 346 #
-3 4140 D _script dialog_altruist@d_CanTakePerk 1 348 R _script dialog_altruist@r_GivePerk 1 348 #
-3 4150 D _script dialog_altruist@d_CanTakePerk 1 351 R _script dialog_altruist@r_GivePerk 1 351 #
-3 4160 D _script dialog_altruist@d_CanTakePerk 1 354 R _script dialog_altruist@r_GivePerk 1 354 #
-3 4170 D _script dialog_altruist@d_CanTakePerk 1 355 R _script dialog_altruist@r_GivePerk 1 355 #
-3 4180 D _script dialog_altruist@d_CanTakePerk 1 356 R _script dialog_altruist@r_GivePerk 1 356 #
-3 4190 D _script dialog_altruist@d_CanTakePerk 1 357 R _script dialog_altruist@r_GivePerk 1 357 #
-3 4200 D _script dialog_altruist@d_CanTakePerk 1 358 R _script dialog_altruist@r_GivePerk 1 358 #
-3 4210 D _script dialog_altruist@d_CanTakePerk 1 359 R _script dialog_altruist@r_GivePerk 1 359 #
-3 4220 D _script dialog_altruist@d_CanTakePerk 1 360 R _script dialog_altruist@r_GivePerk 1 360 #
-3 4230 D _script dialog_altruist@d_CanTakePerk 1 361 R _script dialog_altruist@r_GivePerk 1 361 #
-3 4240 D _script dialog_altruist@d_CanTakePerk 1 362 R _script dialog_altruist@r_GivePerk 1 362 #
-3 4250 D _script dialog_altruist@d_CanTakePerk 1 363 R _script dialog_altruist@r_GivePerk 1 363 #
-3 4260 D _script dialog_altruist@d_CanTakePerk 1 381 R _script dialog_altruist@r_GivePerk 1 381 #
-3 4270 D _script dialog_altruist@d_CanTakePerk 1 383 R _script dialog_altruist@r_GivePerk 1 383 #
-3 4280 D _script dialog_altruist@d_CanTakePerk 1 392 R _script dialog_altruist@r_GivePerk 1 392 #
-3 4290 D _script dialog_altruist@d_CanTakePerk 1 397 R _script dialog_altruist@r_GivePerk 1 397 #
-3 4300 D _script dialog_altruist@d_CanTakePerk 1 399 R _script dialog_altruist@r_GivePerk 1 399 #
-3 4310 D _script dialog_altruist@d_CanTakePerk 1 400 R _script dialog_altruist@r_GivePerk 1 400 #
-3 4320 D _script dialog_altruist@d_CanTakePerk 1 401 R _script dialog_altruist@r_GivePerk 1 401 #
-3 4330 D _script dialog_altruist@d_CanTakePerk 1 406 R _script dialog_altruist@r_GivePerk 1 406 #
-3 4340 D _script dialog_altruist@d_CanTakePerk 1 430 R _script dialog_altruist@r_GivePerk 1 430 #
-3 4350 D _script dialog_altruist@d_CanTakePerk 1 450 R _script dialog_altruist@r_GivePerk 1 450 #
-3 4360 D _script dialog_altruist@d_CanTakePerk 1 454 R _script dialog_altruist@r_GivePerk 1 454 #
-3 4370 D _script dialog_altruist@d_CanTakePerk 1 455 R _script dialog_altruist@r_GivePerk 1 455 #
-3 4380 D _script dialog_altruist@d_CanTakePerk 1 456 R _script dialog_altruist@r_GivePerk 1 456 #
-3 4390 D _script dialog_altruist@d_CanTakePerk 1 459 R _script dialog_altruist@r_GivePerk 1 459 #
-3 4400 D _script dialog_altruist@d_CanTakePerk 1 461 R _script dialog_altruist@r_GivePerk 1 461 @
+3 4010 D _script dialog_altruist@d_CanTakePerk 1 301 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 301 #
+3 4020 D _script dialog_altruist@d_CanTakePerk 1 308 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 308 #
+3 4030 D _script dialog_altruist@d_CanTakePerk 1 312 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 312 #
+3 4040 D _script dialog_altruist@d_CanTakePerk 1 314 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 314 #
+3 4050 D _script dialog_altruist@d_CanTakePerk 1 319 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 319 #
+3 4060 D _script dialog_altruist@d_CanTakePerk 1 331 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 331 #
+3 4070 D _script dialog_altruist@d_CanTakePerk 1 332 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 332 #
+3 4080 D _script dialog_altruist@d_CanTakePerk 1 334 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 334 #
+3 4090 D _script dialog_altruist@d_CanTakePerk 1 335 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 335 #
+3 4100 D _script dialog_altruist@d_CanTakePerk 1 338 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 338 #
+3 4110 D _script dialog_altruist@d_CanTakePerk 1 342 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 342 #
+3 4120 D _script dialog_altruist@d_CanTakePerk 1 344 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 344 #
+3 4130 D _script dialog_altruist@d_CanTakePerk 1 346 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 346 #
+3 4140 D _script dialog_altruist@d_CanTakePerk 1 348 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 348 #
+3 4150 D _script dialog_altruist@d_CanTakePerk 1 351 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 351 #
+3 4160 D _script dialog_altruist@d_CanTakePerk 1 354 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 354 #
+3 4170 D _script dialog_altruist@d_CanTakePerk 1 355 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 355 #
+3 4180 D _script dialog_altruist@d_CanTakePerk 1 356 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 356 #
+3 4190 D _script dialog_altruist@d_CanTakePerk 1 357 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 357 #
+3 4200 D _script dialog_altruist@d_CanTakePerk 1 358 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 358 #
+3 4210 D _script dialog_altruist@d_CanTakePerk 1 359 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 359 #
+3 4220 D _script dialog_altruist@d_CanTakePerk 1 360 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 360 #
+3 4230 D _script dialog_altruist@d_CanTakePerk 1 361 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 361 #
+3 4240 D _script dialog_altruist@d_CanTakePerk 1 362 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 362 #
+3 4250 D _script dialog_altruist@d_CanTakePerk 1 363 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 363 #
+3 4260 D _script dialog_altruist@d_CanTakePerk 1 381 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 381 #
+3 4270 D _script dialog_altruist@d_CanTakePerk 1 383 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 383 #
+3 4280 D _script dialog_altruist@d_CanTakePerk 1 392 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 392 #
+3 4290 D _script dialog_altruist@d_CanTakePerk 1 397 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 397 #
+3 4300 D _script dialog_altruist@d_CanTakePerk 1 399 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 399 #
+3 4310 D _script dialog_altruist@d_CanTakePerk 1 400 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 400 #
+3 4320 D _script dialog_altruist@d_CanTakePerk 1 401 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 401 #
+3 4330 D _script dialog_altruist@d_CanTakePerk 1 406 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 406 #
+3 4340 D _script dialog_altruist@d_CanTakePerk 1 430 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 430 #
+3 4350 D _script dialog_altruist@d_CanTakePerk 1 450 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 450 #
+3 4360 D _script dialog_altruist@d_CanTakePerk 1 454 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 454 #
+3 4370 D _script dialog_altruist@d_CanTakePerk 1 455 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 455 #
+3 4380 D _script dialog_altruist@d_CanTakePerk 1 456 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 456 #
+3 4390 D _script dialog_altruist@d_CanTakePerk 1 459 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 459 #
+3 4400 D _script dialog_altruist@d_CanTakePerk 1 461 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 461 @
 500 5000 None 0 #
 3 5010 R _param p ST_UNSPENT_SKILL_POINTS = 0 #
 65505 5020 @
 600 6000 None 0 #
-3 6010 D _item p PID_BOTTLE_CAPS > 9999 R _script dialog@r_RemoveMoney 1 10000 R _param p ST_UNSPENT_SKILL_POINTS + 10 #
-3 6020 D _item p PID_BOTTLE_CAPS > 29999 R _script dialog@r_RemoveMoney 1 30000 R _param p ST_UNSPENT_SKILL_POINTS + 30 #
-3 6030 D _item p PID_BOTTLE_CAPS > 49999 R _script dialog@r_RemoveMoney 1 50000 R _param p ST_UNSPENT_SKILL_POINTS + 50 #
-3 6040 D _item p PID_BOTTLE_CAPS > 69999 R _script dialog@r_RemoveMoney 1 70000 R _param p ST_UNSPENT_SKILL_POINTS + 70 #
-3 6050 D _item p PID_BOTTLE_CAPS > 79999 R _script dialog@r_RemoveMoney 1 80000 R _param p ST_UNSPENT_SKILL_POINTS + 80 #
-3 6060 D _item p PID_BOTTLE_CAPS > 98999 R _script dialog@r_RemoveMoney 1 99000 R _param p ST_UNSPENT_SKILL_POINTS + 99 #
-0 6070 #
-65505 6080 &
+3 6010 D _item p PID_BOTTLE_CAPS > 999 R _script dialog@r_RemoveMoney 1 1000 R _param p ST_UNSPENT_SKILL_POINTS + 1 #
+3 6020 D _item p PID_BOTTLE_CAPS > 9999 R _script dialog@r_RemoveMoney 1 10000 R _param p ST_UNSPENT_SKILL_POINTS + 10 #
+3 6030 D _item p PID_BOTTLE_CAPS > 29999 R _script dialog@r_RemoveMoney 1 30000 R _param p ST_UNSPENT_SKILL_POINTS + 30 #
+3 6040 D _item p PID_BOTTLE_CAPS > 49999 R _script dialog@r_RemoveMoney 1 50000 R _param p ST_UNSPENT_SKILL_POINTS + 50 #
+3 6050 D _item p PID_BOTTLE_CAPS > 69999 R _script dialog@r_RemoveMoney 1 70000 R _param p ST_UNSPENT_SKILL_POINTS + 70 #
+3 6060 D _item p PID_BOTTLE_CAPS > 79999 R _script dialog@r_RemoveMoney 1 80000 R _param p ST_UNSPENT_SKILL_POINTS + 80 #
+3 6070 D _item p PID_BOTTLE_CAPS > 98999 R _script dialog@r_RemoveMoney 1 99000 R _param p ST_UNSPENT_SKILL_POINTS + 99 #
+0 6080 #
+65505 6090 @
+700 7000 None 0 #
+700 7010 D _item p PID_DOGTAGS > 0 R _item p PID_DOGTAGS - 1 R _item p PID_BOTTLE_CAPS + 3000 #
+65505 7020 @
+666 8000 None 0 &
 
 [engl]
-{100}{}{Altruist}
-{200}{}{You see an altruist.}
-{210}{}{He will give you levels and stuff.}
+{100}{}{Zerg-Man}
+{200}{}{You see a very old man.}
+{210}{}{He will give you levels and some other stuff. But you must show some money to him. }
 {1000}{}{Predialogue installations}
 {1010}{}{Answer text}
-{2000}{}{Welcome, traveler. What brings you to me? Oh yeah, if you're interested in the whole range of my services, come when you have more than 100 thousand caps on your hands...}
-{2010}{}{[100k]  + I level}
-{2020}{}{[300k]  + III levels.}
-{2030}{}{[400k] -  Support Perk that I am eligible to take.}
-{2040}{}{[100k] - Buy 10 OilCans.}
-{2050}{}{[20k] -  Enclave Armor Set.}
-{2060}{}{[20k] - NCR Armor Set.}
-{2070}{}{[2k] - Remove drug effects.}
-{2080}{}{[2k] - I humbly suggest clearing all of my reputations.}
-{2090}{}{[FREE] - Remove USP}
-{2100}{}{Want buy some Skill Points}
+{1020}{}{Answer text}
+{2000}{}{Welcome, traveler. What brings you to me? Oh yeah, if you're interested in the whole range of my services, come when you have more than 100 thousand caps on your hands...or some more...}
+{2010}{}{[10k  ] - Take 1 level.}
+{2020}{}{[30k  ] - Take 3 levels.}
+{2030}{}{[40k  ] - Support Perk that I am eligible to take.}
+{2040}{}{[100k ] - Buy 10 OilCans.}
+{2050}{}{[20k  ] - Buy BOS Armor Set.}
+{2060}{}{[20k  ] - Buy Enclave Armor Set.}
+{2070}{}{[20k  ] - Buy NCR Armor Set.}
+{2080}{}{[2k   ] - Remove drug effects.}
+{2090}{}{[2k   ] - I humbly suggest clearing all of my reputations.}
+{2100}{}{I need and want buy some skill point}
 {2110}{}{[GM-Option] Gimme 100.000 caps.}
+{2120}{}{[FREE] - Remove USP}
+{2130}{}{I found a token in the wasteland}
 {3000}{}{Yes.}
-{4000}{}{Which one?}
+{4000}{}{Which one? One Support Perk cost 40 000 caps. If you need this, you must pay.}
 {4010}{}{@msg game 103011@}
 {4020}{}{@msg game 103081@}
 {4030}{}{@msg game 103121@}
@@ -135,16 +146,21 @@ lang=engl
 {4380}{}{@msg game 104561@}
 {4390}{}{@msg game 104591@}
 {4400}{}{@msg game 104611@}
-{5000}{}{Remove SP points}
+{5000}{}{Remove skill points, i finish make ideal person.}
 {5010}{}{Do it}
 {5020}{}{Not need it}
 {6000}{}{Gain Some SP points - 1 point cost 1000 caps - try to calculate. How much you need?}
-{6010}{}{10 SP}
-{6020}{}{30 SP}
-{6030}{}{50 SP}
-{6040}{}{70 SP}
-{6050}{}{80 SP}
-{6060}{}{99 SP}
-{6070}{}{Close Dialoge}
-{6080}{}{Back to prv Dialog}
+{6010}{}{Buy 1 skill point}
+{6020}{}{Buy 10 skill point}
+{6030}{}{Buy 30 skill point}
+{6040}{}{Buy 50 skill point}
+{6050}{}{Buy 70 skill point}
+{6060}{}{Buy 80 skill point}
+{6070}{}{Buy 99 skill point}
+{6080}{}{Close Dialog}
+{6090}{}{Back to prv Dialog}
+{7000}{}{Let their bodies rest in peace, give them here. I think the sum of 3,000 caps will be sufficient.}
+{7010}{}{{You give a Dog Tag to this man}
+{7020}{}{Not now.}
+{8000}{}{Know what traveler? I won't even talk to you. When you bring me 100 thousand caps and show me them, in your hands of course, maybe then we'll talk.}
 

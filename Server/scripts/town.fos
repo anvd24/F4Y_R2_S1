@@ -1604,7 +1604,7 @@ class CTown : ITown
         {
             //_AddContItem(PID_LEATHER_ARMOR_MK_II, Random(0, 1));
             _AddContItem(PID_BRAHMIN_HIDE,        Random(1, 3));
-            _AddContItem(PID_MEAT_JERKY,          Random(5, 10));
+            //_AddContItem(PID_MEAT_JERKY,          Random(5, 10));
 			
 			//_AddContItem(PID_SMALL_ENERGY_CELL,	  Random(25,50));
 			//_AddContItem(PID_MICRO_FUSION_CELL,	  Random(10, 25));
@@ -1620,17 +1620,17 @@ class CTown : ITown
 			//_AddBetterContItem(PID_BUFFOUT,       Random(0, 1));
 			//_AddBetterContItem(PID_PSYCHO,        Random(0, 1));
 			//_AddBetterContItem(PID_MENTATS,        Random(0, 1));
-            _AddBetterContItem(PID_STIMPAK,       Random(1, 2));
+            _AddBetterContItem(PID_STIMPAK,       Random(0, 2));
 			_AddBetterContItem(PID_SUPER_STIMPAK,       Random(0, 1));
             //LOOP(10) _AddContItem(random_from_array(ammo), Random(100, 10 + 10 * bonus));
             //_AddContItem(random_from_array(rareAmmo), Random(50, 50 + 10 * bonus));
-            rewardCaps = 4000;
+            rewardCaps = 400;
         }
         else if(id == TOWN_KLAMATH)
         {
             //_AddContItem(PID_LEATHER_ARMOR_MK_II, Random(0, 1));
-            _AddContItem(PID_GOLDEN_GECKO_PELT,   Random(1, 3));
-            _AddContItem(PID_GECKO_PELT,          Random(1, 3));
+            _AddContItem(PID_GOLDEN_GECKO_PELT,   Random(0, 3));
+            _AddContItem(PID_GECKO_PELT,          Random(0, 3));
 			
 			//_AddContItem(PID_SMALL_ENERGY_CELL,	  Random(25,50));
 			//_AddContItem(PID_MICRO_FUSION_CELL,	  Random(10, 25));
@@ -1646,16 +1646,16 @@ class CTown : ITown
 			//_AddBetterContItem(PID_BUFFOUT,       Random(0, 1));
 			//_AddBetterContItem(PID_PSYCHO,        Random(0, 1));
 			//_AddBetterContItem(PID_MENTATS,        Random(0, 1));
-            _AddBetterContItem(PID_STIMPAK,       Random(1, 2));
+            _AddBetterContItem(PID_STIMPAK,       Random(0, 2));
 			_AddBetterContItem(PID_SUPER_STIMPAK,       Random(0, 1));
            // LOOP(10) _AddContItem(random_from_array(ammo), Random(80, 80 + 10 * bonus));
            // _AddContItem(random_from_array(rareAmmo), Random(40, 40 + 10 * bonus));
-            rewardCaps = 4000;
+            rewardCaps = 400;
         }
         else if(id == TOWN_GECKO)
         {
-            _AddContItem(PID_ELECTRONIC_PARTS,    Random(3, 6));
-            _AddContItem(PID_URANIUM_ORE,         Random(2, 4));
+            _AddContItem(PID_ELECTRONIC_PARTS,    Random(0, 6));
+            _AddContItem(PID_URANIUM_ORE,         Random(0, 4));
 	        _AddBetterContItem(PID_RAD_X,           Random(0, 1));
 			_AddBetterContItem(PID_RADAWAY,       Random(0, 1));
 			
@@ -1673,20 +1673,20 @@ class CTown : ITown
 			//_AddBetterContItem(PID_BUFFOUT,       Random(0, 1));
 			//_AddBetterContItem(PID_PSYCHO,        Random(0, 1));
 			//_AddBetterContItem(PID_MENTATS,        Random(0, 1));
-            _AddBetterContItem(PID_STIMPAK,       Random(1, 2));
+            _AddBetterContItem(PID_STIMPAK,       Random(0, 2));
 			_AddBetterContItem(PID_SUPER_STIMPAK,       Random(0, 1));
             //LOOP(10) _AddContItem(random_from_array(ammo), Random(100, 100 + 10 * bonus));
             //_AddContItem(random_from_array(rareAmmo), Random(50, 50 + 10 * bonus));
-            rewardCaps = 6000;
+            rewardCaps = 600;
         }
         else if(id == TOWN_BH)     // Broken Hills
         {
             //LOOP(10) _AddContItem(random_from_array(ammo), Random(100, 100 + 10 * bonus));
             //_AddContItem(random_from_array(rareAmmo), Random(50, 50 + 10 * bonus));
             //_AddContItem(PID_URANIUM_ORE,         Random(3, 6));
-			_AddContItem(PID_REFINED_ORE,         Random(1, 3));
-			_AddContItem(PID_MINERALS2,	Random(3, 6));
-			_AddContItem(PID_ORE2,	Random(3, 6));
+			_AddContItem(PID_REFINED_ORE,         Random(0, 3));
+			_AddContItem(PID_MINERALS2,	Random(0, 6));
+			_AddContItem(PID_ORE2,	Random(0, 6));
 				
 			//_AddContItem(PID_SMALL_ENERGY_CELL,	  Random(25,50));
 			//_AddContItem(PID_MICRO_FUSION_CELL,	  Random(10, 25));
@@ -1702,9 +1702,9 @@ class CTown : ITown
 			//_AddBetterContItem(PID_BUFFOUT,       Random(0, 1));
 			//_AddBetterContItem(PID_PSYCHO,        Random(0, 1));
 			//_AddBetterContItem(PID_MENTATS,        Random(0, 1));
-            _AddBetterContItem(PID_STIMPAK,       Random(1, 2));
+            _AddBetterContItem(PID_STIMPAK,       Random(0, 2));
 			_AddBetterContItem(PID_SUPER_STIMPAK,       Random(0, 1));
-            rewardCaps = 8000;
+            rewardCaps = 800;
         }
         else if(id == TOWN_DEN)
         {
@@ -1725,17 +1725,17 @@ class CTown : ITown
 			//_AddBetterContItem(PID_BUFFOUT,       Random(0, 1));
 			//_AddBetterContItem(PID_PSYCHO,        Random(0, 1));
 			//_AddBetterContItem(PID_MENTATS,        Random(0, 1));
-            _AddBetterContItem(PID_STIMPAK,       Random(1, 2));
+            _AddBetterContItem(PID_STIMPAK,       Random(0, 2));
 			_AddBetterContItem(PID_SUPER_STIMPAK,       Random(0, 1));
-            rewardCaps = 6000;
+            rewardCaps = 600;
         }
         else if(id == TOWN_REDDING)
         {
             //LOOP(10) _AddContItem(random_from_array(ammo), Random(50, 50 + 50 * bonus));
             //_AddContItem(random_from_array(rareAmmo), Random(10, 10 + 10 * bonus));
-            _AddContItem(PID_GOLD_NUGGET,         Random(3, 6));
-			_AddContItem(PID_MINERALS2,	Random(3, 6));
-			_AddContItem(PID_ORE2,	Random(3, 6));
+            _AddContItem(PID_GOLD_NUGGET,         Random(0, 6));
+			_AddContItem(PID_MINERALS2,	Random(0, 6));
+			_AddContItem(PID_ORE2,	Random(0, 6));
 			
 			//_AddContItem(PID_SMALL_ENERGY_CELL,	  Random(25,50));
 			//_AddContItem(PID_MICRO_FUSION_CELL,	  Random(10, 25));
@@ -1751,9 +1751,9 @@ class CTown : ITown
 			//_AddBetterContItem(PID_BUFFOUT,       Random(0, 1));
 			//_AddBetterContItem(PID_PSYCHO,        Random(0, 1));
 			//_AddBetterContItem(PID_MENTATS,        Random(0, 1));
-            _AddBetterContItem(PID_STIMPAK,       Random(1, 2));
+            _AddBetterContItem(PID_STIMPAK,       Random(0, 2));
 			_AddBetterContItem(PID_SUPER_STIMPAK,       Random(0, 1));
-            rewardCaps = 8000;
+            rewardCaps = 800;
         }
 
         BanksRemoveMoney(rewardCaps);
