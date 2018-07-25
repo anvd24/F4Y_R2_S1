@@ -13,7 +13,8 @@ lang=engl
 10 2010 D _script map_tent@d_IsTentOwner 0  #
 5 2020 R _script map_tent@r_ThrowSomething 0  #
 20 2030 D _script map_tent@d_KnowLocation 0  D _script map_tent@d_IsNotTentOwner 0  R _script map_tent@r_ForgetLocation 0  #
-0 2040 @
+200 2040 D _item p PID_FIREWOOD > 0 D _item p PID_MEAT > 0  R _item p PID_FIREWOOD - 1 R _item p PID_MEAT - 1 R _item p PID_MEAT_ON_A_STICK + 1 #
+0 2050 @
 10 3000 None 1 #
 10 3010 D _script map_tent@d_IsTentOwner 0  R _script map_tent@r_TentName 0  #
 11 3020 D _script map_tent@d_IsUpgradeAvailable 1 571 #
@@ -27,20 +28,22 @@ lang=engl
 110 6000 None 1 #
 10 6010 D _script map_tent@d_IsTentOwner 0  D _script map_tent@d_IsUpgradeAvailable 1 571 D _item p PID_FIREWOOD } 2 D _item p PID_MULTI_TOOL } 1 R _script map_tent@r_InstallUpgrade 1 571 R _item p PID_FIREWOOD - 2 R _item p PID_MULTI_TOOL - 1 #
 11 6020 @
-1000 7000 None 1 #
-0 7010 D _script map_tent@d_IsTentOwner 0  R _script map_tent@r_AbandonTent 0  #
-0 7020 &
+200 7000 None 0 @
+1000 8000 None 1 #
+0 8010 D _script map_tent@d_IsTentOwner 0  R _script map_tent@r_AbandonTent 0  #
+0 8020 &
 
 [engl]
 {100}{}{none}
 {1000}{}{Predialogue installations}
 {1010}{}{Special Tent Item}
 {1020}{}{Show}
-{2000}{}{[The campfire is warm and comfy. Maybe you can rest a little while.]}
+{2000}{}{[The campfire is warm and comfy. Maybe you can rest a little while. You can cook at this campfire. A piece of meat and some wood. You can have a snack.]}
 {2010}{}{[Tent management]}
 {2020}{}{[Throw something into fire]}
 {2030}{}{[Forget location]}
-{2040}{}{[Exit]}
+{2040}{}{[Fry 10 pieces of meat]}
+{2050}{}{[Exit]}
 {3000}{}{[You sit by the fire and decide what to do next with this place.]}
 {3010}{}{[Change the name of the tent]}
 {3020}{}{[Upgrades]}
@@ -59,9 +62,10 @@ Materials:
 - Tools}
 {6010}{}{[Upgrade]}
 {6020}{}{[Back]}
-{7000}{}{[Due to recent changes, this location needs to be deleted. All items and non-player characters will be deleted, with no way to get them back; player characters will be moved to worldmap.
+{7000}{}{Cooking is over}
+{8000}{}{[Due to recent changes, this location needs to be deleted. All items and non-player characters will be deleted, with no way to get them back; player characters will be moved to worldmap.
 
 Make sure you secure all items and move all followers to other place before you continue. There will be no refunds.]}
-{7010}{}{[Continue]}
-{7020}{}{[Exit]}
+{8010}{}{[Continue]}
+{8020}{}{[Exit]}
 
