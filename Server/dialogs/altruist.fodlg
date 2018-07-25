@@ -8,7 +8,8 @@ lang=engl
 &
 1 1000 None 0 #
 2 1010 D _item p PID_BOTTLE_CAPS > 99999 #
-666 1020 D _item p PID_BOTTLE_CAPS < 100000 @
+700 1020 D _item p PID_DOGTAGS > 0 #
+666 1030 D _item p PID_BOTTLE_CAPS < 100000 @
 2 2000 None 0 #
 3 2010 D _item p PID_BOTTLE_CAPS > 9999 D _param p ST_LEVEL < 24 R _script dialog@r_RemoveMoney 1 10000 R _script dialog_altruist@r_Give 1 0 #
 3 2020 D _item p PID_BOTTLE_CAPS > 29999 D _param p ST_LEVEL < 24 R _script dialog@r_RemoveMoney 1 30000 R _script dialog_altruist@r_Give 1 1 #
@@ -22,7 +23,8 @@ lang=engl
 600 2100 D _item p PID_BOTTLE_CAPS > 999 #
 3 2110 D _param p ST_STRENGTH > 99 R _item p PID_BOTTLE_CAPS + 100000 #
 500 2120 D _param p ST_UNSPENT_SKILL_POINTS > 0 #
-700 2130 D _item p PID_DOGTAGS > 0 @
+700 2130 D _item p PID_DOGTAGS > 0 #
+0 2140 @
 3 3000 None 0 @
 4 4000 None 0 #
 3 4010 D _script dialog_altruist@d_CanTakePerk 1 301 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 301 #
@@ -80,7 +82,7 @@ lang=engl
 65505 6090 @
 700 7000 None 0 #
 700 7010 D _item p PID_DOGTAGS > 0 R _item p PID_DOGTAGS - 1 R _item p PID_BOTTLE_CAPS + 3000 #
-65505 7020 @
+0 7020 @
 666 8000 None 0 &
 
 [engl]
@@ -88,22 +90,24 @@ lang=engl
 {200}{}{You see a very old man.}
 {210}{}{He will give you levels and some other stuff. But you must show some money to him. }
 {1000}{}{Predialogue installations}
-{1010}{}{Answer text}
-{1020}{}{Answer text}
+{1010}{}{have money or dog tags}
+{1020}{}{dogtags}
+{1030}{}{no money}
 {2000}{}{Welcome, traveler. What brings you to me? Oh yeah, if you're interested in the whole range of my services, come when you have more than 100 thousand caps on your hands...or some more...}
-{2010}{}{[10k  ] - Take 1 level.}
-{2020}{}{[30k  ] - Take 3 levels.}
-{2030}{}{[40k  ] - Support Perk that I am eligible to take.}
-{2040}{}{[100k ] - Buy 10 OilCans.}
-{2050}{}{[20k  ] - Buy BOS Armor Set.}
-{2060}{}{[20k  ] - Buy Enclave Armor Set.}
-{2070}{}{[20k  ] - Buy NCR Armor Set.}
-{2080}{}{[2k   ] - Remove drug effects.}
-{2090}{}{[2k   ] - I humbly suggest clearing all of my reputations.}
+{2010}{}{[10k] - Take 1 level.}
+{2020}{}{[30k] - Take 3 levels.}
+{2030}{}{[40k] - Support Perk that I am eligible to take.}
+{2040}{}{[100k] - Buy 10 OilCans.}
+{2050}{}{[20k] - Buy BOS Armor.}
+{2060}{}{[20k] - Buy Enclave Armor.}
+{2070}{}{[20k] - Buy NCR Armor.}
+{2080}{}{[2k] - Remove drug effects.}
+{2090}{}{[2k] - I humbly suggest clearing all of my reputations.}
 {2100}{}{I need and want buy some skill point}
 {2110}{}{[GM-Option] Gimme 100.000 caps.}
 {2120}{}{[FREE] - Remove USP}
 {2130}{}{I found a token in the wasteland}
+{2140}{}{Close dialog}
 {3000}{}{Yes.}
 {4000}{}{Which one? One Support Perk cost 40 000 caps. If you need this, you must pay.}
 {4010}{}{@msg game 103011@}
