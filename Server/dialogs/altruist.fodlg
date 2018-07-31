@@ -24,7 +24,8 @@ lang=engl
 3 2110 D _param p ST_STRENGTH > 99 R _item p PID_BOTTLE_CAPS + 100000 #
 500 2120 D _param p ST_UNSPENT_SKILL_POINTS > 0 #
 700 2130 D _item p PID_DOGTAGS > 0 #
-0 2140 @
+0 2140 #
+10 2150 D _item p PID_BOTTLE_CAPS } 450000 @
 3 3000 None 0 @
 4 4000 None 0 #
 3 4010 D _script dialog_altruist@d_CanTakePerk 1 301 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 301 #
@@ -67,23 +68,27 @@ lang=engl
 3 4380 D _script dialog_altruist@d_CanTakePerk 1 456 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 456 #
 3 4390 D _script dialog_altruist@d_CanTakePerk 1 459 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 459 #
 3 4400 D _script dialog_altruist@d_CanTakePerk 1 461 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 461 @
-500 5000 None 0 #
-3 5010 R _param p ST_UNSPENT_SKILL_POINTS = 0 #
-65505 5020 @
-600 6000 None 0 #
-3 6010 D _item p PID_BOTTLE_CAPS > 999 R _script dialog@r_RemoveMoney 1 1000 R _param p ST_UNSPENT_SKILL_POINTS + 1 #
-3 6020 D _item p PID_BOTTLE_CAPS > 9999 R _script dialog@r_RemoveMoney 1 10000 R _param p ST_UNSPENT_SKILL_POINTS + 10 #
-3 6030 D _item p PID_BOTTLE_CAPS > 29999 R _script dialog@r_RemoveMoney 1 30000 R _param p ST_UNSPENT_SKILL_POINTS + 30 #
-3 6040 D _item p PID_BOTTLE_CAPS > 49999 R _script dialog@r_RemoveMoney 1 50000 R _param p ST_UNSPENT_SKILL_POINTS + 50 #
-3 6050 D _item p PID_BOTTLE_CAPS > 69999 R _script dialog@r_RemoveMoney 1 70000 R _param p ST_UNSPENT_SKILL_POINTS + 70 #
-3 6060 D _item p PID_BOTTLE_CAPS > 79999 R _script dialog@r_RemoveMoney 1 80000 R _param p ST_UNSPENT_SKILL_POINTS + 80 #
-3 6070 D _item p PID_BOTTLE_CAPS > 98999 R _script dialog@r_RemoveMoney 1 99000 R _param p ST_UNSPENT_SKILL_POINTS + 99 #
-0 6080 #
-65505 6090 @
-700 7000 None 0 #
-700 7010 D _item p PID_DOGTAGS > 0 R _item p PID_DOGTAGS - 1 R _item p PID_BOTTLE_CAPS + 3000 #
-0 7020 @
-666 8000 None 0 &
+10 5000 None 0 #
+11 5010 D _param p TRAIT_FAST_SHOT = 1 D _item p PID_BOTTLE_CAPS } 450000 R _script dialog@r_RemoveMoney 1 450000 R _param p TRAIT_FAST_SHOT = 0 #
+11 5020 D _param p TRAIT_FAST_SHOT = 0 D _item p PID_BOTTLE_CAPS } 450000 R _script dialog@r_RemoveMoney 1 450000 R _param p TRAIT_FAST_SHOT = 1 @
+11 6000 None 0 @
+500 7000 None 0 #
+3 7010 R _param p ST_UNSPENT_SKILL_POINTS = 0 #
+65505 7020 @
+600 8000 None 0 #
+3 8010 D _item p PID_BOTTLE_CAPS > 999 R _script dialog@r_RemoveMoney 1 1000 R _param p ST_UNSPENT_SKILL_POINTS + 1 #
+3 8020 D _item p PID_BOTTLE_CAPS > 9999 R _script dialog@r_RemoveMoney 1 10000 R _param p ST_UNSPENT_SKILL_POINTS + 10 #
+3 8030 D _item p PID_BOTTLE_CAPS > 29999 R _script dialog@r_RemoveMoney 1 30000 R _param p ST_UNSPENT_SKILL_POINTS + 30 #
+3 8040 D _item p PID_BOTTLE_CAPS > 49999 R _script dialog@r_RemoveMoney 1 50000 R _param p ST_UNSPENT_SKILL_POINTS + 50 #
+3 8050 D _item p PID_BOTTLE_CAPS > 69999 R _script dialog@r_RemoveMoney 1 70000 R _param p ST_UNSPENT_SKILL_POINTS + 70 #
+3 8060 D _item p PID_BOTTLE_CAPS > 79999 R _script dialog@r_RemoveMoney 1 80000 R _param p ST_UNSPENT_SKILL_POINTS + 80 #
+3 8070 D _item p PID_BOTTLE_CAPS > 98999 R _script dialog@r_RemoveMoney 1 99000 R _param p ST_UNSPENT_SKILL_POINTS + 99 #
+0 8080 #
+65505 8090 @
+700 9000 None 0 #
+700 9010 D _item p PID_DOGTAGS > 0 R _item p PID_DOGTAGS - 1 R _item p PID_BOTTLE_CAPS + 3000 #
+0 9020 @
+666 10000 None 0 &
 
 [engl]
 {100}{}{Zerg-Man}
@@ -108,6 +113,7 @@ lang=engl
 {2120}{}{[FREE] - Remove USP}
 {2130}{}{I found a token in the wasteland}
 {2140}{}{Close dialog}
+{2150}{}{I'm interested in special manipulations.}
 {3000}{}{Yes.}
 {4000}{}{Which one? One Support Perk cost 40 000 caps. If you need this, you must pay.}
 {4010}{}{@msg game 103011@}
@@ -150,21 +156,25 @@ lang=engl
 {4380}{}{@msg game 104561@}
 {4390}{}{@msg game 104591@}
 {4400}{}{@msg game 104611@}
-{5000}{}{Remove skill points, i finish make ideal person.}
-{5010}{}{Do it}
-{5020}{}{Not need it}
-{6000}{}{Gain Some SP points - 1 point cost 1000 caps - try to calculate. How much you need?}
-{6010}{}{Buy 1 skill point}
-{6020}{}{Buy 10 skill point}
-{6030}{}{Buy 30 skill point}
-{6040}{}{Buy 50 skill point}
-{6050}{}{Buy 70 skill point}
-{6060}{}{Buy 80 skill point}
-{6070}{}{Buy 99 skill point}
-{6080}{}{Close Dialog}
-{6090}{}{Back to prv Dialog}
-{7000}{}{Let their bodies rest in peace, give them here. I think the sum of 3,000 caps will be sufficient.}
-{7010}{}{{You give a Dog Tag to this man}
-{7020}{}{Not now.}
-{8000}{}{Know what traveler? I won't even talk to you. When you bring me 100 thousand caps and show me them, in your hands of course, maybe then we'll talk.}
+{5000}{}{so what kind of manipulation are you interested in?}
+{5010}{}{Remove Trait - Fast Shot}
+{5020}{}{Get Trait - Fast Shot}
+{6000}{}{Everything went well. Come if you need me.}
+{7000}{}{Remove skill points, i finish make ideal person.}
+{7010}{}{Do it}
+{7020}{}{Not need it}
+{8000}{}{Gain Some SP points - 1 point cost 1000 caps - try to calculate. How much you need?}
+{8010}{}{Buy 1 skill point}
+{8020}{}{Buy 10 skill point}
+{8030}{}{Buy 30 skill point}
+{8040}{}{Buy 50 skill point}
+{8050}{}{Buy 70 skill point}
+{8060}{}{Buy 80 skill point}
+{8070}{}{Buy 99 skill point}
+{8080}{}{Close Dialog}
+{8090}{}{Back to prv Dialog}
+{9000}{}{Let their bodies rest in peace, give them here. I think the sum of 3,000 caps will be sufficient.}
+{9010}{}{{You give a Dog Tag to this man}
+{9020}{}{Not now.}
+{10000}{}{Know what traveler? I won't even talk to you. When you bring me 100 thousand caps and show me them, in your hands of course, maybe then we'll talk.}
 
