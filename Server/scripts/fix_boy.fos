@@ -698,7 +698,7 @@ bool ReverseItemCrafted(Critter& cr, Item& item, bool isMassScience)
         else
             cr.Say(SAY_NETMSG, "You've disassembled the " + type + ", but were unable to obtain anything.");
 	}	
-    uint expAmount=250+protoItemCost/50;
+    uint expAmount=Random(20,200);
 	cr.StatBase[ST_EXPERIENCE] += expAmount;
 	//LogExperience(cr, expAmount, SK_SCIENCE, "Dismantling", pid);
     if(!isMassScience)
@@ -770,7 +770,7 @@ bool ReverseItemGeneric(Critter& cr, Item& item, bool isMassScience)
                     if(!isMassScience)
                         cr.Say(SAY_NETMSG, "You've disassembled the weapon, but were unable to obtain anything.");
                 }
-			expAmount=250+protoItemCost/50;
+			expAmount=Random(50,150);
 			cr.StatBase[ST_EXPERIENCE] += expAmount;
 			LogExperience(cr, expAmount, SK_SCIENCE, "Dismantling", pid);
             if(!isMassScience)
@@ -816,7 +816,7 @@ bool ReverseItemGeneric(Critter& cr, Item& item, bool isMassScience)
             pids.insertLast(PID_PUMP_PARTS);
             pids.insertLast(PID_METAL_PARTS);
             pids.insertLast(PID_ALLOYS);
-            pids.insertLast(PID_MOTIVATOR);                               // !
+            //pids.insertLast(PID_MOTIVATOR);                               // !
             added = Add(cr, pids, value, sk);
             break;
         }
@@ -828,7 +828,7 @@ bool ReverseItemGeneric(Critter& cr, Item& item, bool isMassScience)
             else
                 cr.Say(SAY_NETMSG, "You've disassembled the armor, but were unable to obtain anything.");
         }
-        expAmount=250+protoItemCost/50;
+        expAmount=Random(10,100);
 		cr.StatBase[ST_EXPERIENCE] += expAmount;
 		//LogExperience(cr, expAmount, SK_SCIENCE, "Dismantling", pid);
         if(!isMassScience)
@@ -838,7 +838,7 @@ bool ReverseItemGeneric(Critter& cr, Item& item, bool isMassScience)
         DeleteItem(item);
         if(!isMassScience)
             cr.Say(SAY_NETMSG, "You've disassembled the container, but were unable to obtain anything.");
-        expAmount=250+protoItemCost/50;
+        expAmount=Random(10,50);
 		cr.StatBase[ST_EXPERIENCE] += expAmount;
 		//LogExperience(cr, expAmount, SK_SCIENCE, "Dismantling", pid);
         if(!isMassScience)

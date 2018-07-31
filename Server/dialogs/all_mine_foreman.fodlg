@@ -15,10 +15,10 @@ lang=engl
 201 2030 D _item n PID_METAL_ORE > 199 D _item p PID_METAL_ORE > 0 #
 101 2040 D _item n PID_MINERAL { 199 D _item p PID_MINERAL > 0 #
 202 2050 D _item n PID_MINERAL > 199 D _item p PID_MINERAL > 0 #
-300 2060 D _item n PID_METAL_ORE > 99 R _param p ST_EXPERIENCE + 100 R _item n PID_METAL_ORE = 0 R _script dialog@r_AddMoney 1 500 R _param p REPUTATION_FLC + 1 #
-300 2070 D _item n PID_MINERAL > 99 R _param p ST_EXPERIENCE + 100 R _item n PID_MINERAL = 0 R _script dialog@r_AddMoney 1 500 R _param p REPUTATION_FLC + 1 #
-50 2080 D _param p REPUTATION_FLC > 0 #
-51 2090 D _param p REPUTATION_FLC { 0 R _param p REPUTATION_FLC = 1 R _item p PID_BOTTLE_CAPS - 500 #
+300 2060 D _item n PID_METAL_ORE > 99 R _param p ST_EXPERIENCE + 999 R _item n PID_METAL_ORE = 0 R _item n PID_MINERAL = 0 R _item n PID_BOTTLE_CAPS = 0 R _script dialog@r_AddMoney 1 500 R _param p REPUTATION_NCR + 1 #
+300 2070 D _item n PID_MINERAL > 99 R _param p ST_EXPERIENCE + 999 R _item n PID_MINERAL = 0 R _item n PID_METAL_ORE = 0 R _item n PID_BOTTLE_CAPS = 0 R _script dialog@r_AddMoney 1 500 R _param p REPUTATION_NCR + 1 #
+50 2080 D _param p REPUTATION_NCR > 0 #
+51 2090 D _param p REPUTATION_NCR < 0 R _param p REPUTATION_NCR + 1 R _item p PID_BOTTLE_CAPS - 500 #
 0 2100 @
 2 3000 None 0 #
 3 3010 #
@@ -45,15 +45,15 @@ lang=engl
 2 10010 #
 0 10020 @
 100 11000 None 0 #
-100 11010 D _item p PID_METAL_ORE > 0 R _item p PID_METAL_ORE - 1 R _item n PID_METAL_ORE + 1 R _item p PID_BOTTLE_CAPS + 18 #
-100 11020 D _item p PID_METAL_ORE } 10 R _item p PID_METAL_ORE - 10 R _item n PID_METAL_ORE + 10 R _item p PID_BOTTLE_CAPS + 180 #
+100 11010 D _item p PID_METAL_ORE > 0 R _item p PID_METAL_ORE - 1 R _item n PID_METAL_ORE + 1 R _script dialog@r_AddMoney 1 18 #
+100 11020 D _item p PID_METAL_ORE } 10 R _item p PID_METAL_ORE - 10 R _item n PID_METAL_ORE + 10 R _script dialog@r_AddMoney 1 180 #
 200 11030 @
 101 12000 None 0 #
-101 12010 D _item p PID_MINERAL > 0 R _item p PID_MINERAL - 1 R _item n PID_MINERAL + 1 R _item p PID_BOTTLE_CAPS + 12 #
-101 12020 D _item p PID_MINERAL } 10 R _item p PID_MINERAL - 10 R _item n PID_MINERAL + 10 R _item p PID_BOTTLE_CAPS + 120 #
+101 12010 D _item p PID_MINERAL > 0 R _item p PID_MINERAL - 1 R _item n PID_MINERAL + 1 R _script dialog@r_AddMoney 1 12 #
+101 12020 D _item p PID_MINERAL } 10 R _item p PID_MINERAL - 10 R _item n PID_MINERAL + 10 R _script dialog@r_AddMoney 1 120 #
 200 12030 @
 50 13000 None 0 #
-400 13010 D _item p PID_BOTTLE_CAPS } 50 R _param p REPUTATION_FLC - 1 R _item p PID_MEAT_ON_A_STICK + 1 R _item p PID_WATERBAG_EMPTY + 1 R _item p PID_BOTTLE_CAPS - 50 #
+400 13010 R _param p REPUTATION_NCR - 1 R _item p PID_MEAT_ON_A_STICK + 1 R _item p PID_WATERBAG_EMPTY + 1 #
 0 13020 @
 51 14000 None 0 @
 200 15000 None 0 @
@@ -76,7 +76,7 @@ lang=engl
 {2050}{}{I want to sell some minerals}
 {2060}{}{Maybe it's time. I think it's time to pay for my work. And free up space in the warehouse}
 {2070}{}{Maybe it's time. I think it's time to pay for my work. And free up space in the warehouse}
-{2080}{}{I need some water and food. Can you see what you can do? I will give you 50 bottle caps.}
+{2080}{}{I need some water and food. Can you see what you can do? Im a miner here... }
 {2090}{}{You're saying something about corruption and bribery.(imperceptibly give him 500 caps) I want be a miner.}
 {2100}{}{Nothing. Bye.}
 {3000}{}{Yes, what do you want?}
@@ -112,12 +112,12 @@ lang=engl
 {12020}{}{I want to sell ten}
 {12030}{}{Exit}
 {13000}{}{I think that won't be a problem.Take your lunch, it's enough for a while.}
-{13010}{}{[Pick up lunch for the miner] - You pass 50 caps. }
+{13010}{}{[Pick up lunch for the miner]}
 {13020}{}{Not now - i change my mind.}
-{14000}{}{It was interesting @lex name@. I'll think of you as a reliable miner for now.}
+{14000}{}{It was interesting. I'll think of you as a reliable miner for now.}
 {15000}{}{If you want to earn more, come again. We always need people mining ore and minerals}
 {16000}{}{We have enough mined ore. Come later, need some time.}
 {17000}{}{We have enough mined minerals. Come later, need some time.}
 {18000}{}{Hey, guys, take the ore and the minerals, send them in a caravan. And that already does not enter the warehouse.}
-{19000}{}{ @lex name@.careful, this your food, water dial from the pipe.}
+{19000}{}{Careful, this your food, water dial from the pipe.}
 

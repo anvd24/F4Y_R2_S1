@@ -17622,7 +17622,7 @@ Critter_Cond         1
 Critter_Anim1        0
 Critter_Anim2        0
 Critter_ParamIndex0  ST_DIALOG_ID
-Critter_ParamValue0  1085
+Critter_ParamValue0  1058
 Critter_ParamIndex1  ST_AI_ID
 Critter_ParamValue1  22
 Critter_ParamIndex2  ST_BAG_ID
@@ -17737,7 +17737,7 @@ Critter_Cond         1
 Critter_Anim1        0
 Critter_Anim2        0
 Critter_ParamIndex0  ST_DIALOG_ID
-Critter_ParamValue0  1085
+Critter_ParamValue0  1058
 Critter_ParamIndex1  ST_AI_ID
 Critter_ParamValue1  22
 Critter_ParamIndex2  ST_BAG_ID
@@ -21496,7 +21496,7 @@ Critter_Cond         1
 Critter_Anim1        0
 Critter_Anim2        0
 Critter_ParamIndex0  ST_DIALOG_ID
-Critter_ParamValue0  1085
+Critter_ParamValue0  1058
 Critter_ParamIndex1  ST_AI_ID
 Critter_ParamValue1  22
 Critter_ParamIndex2  ST_BAG_ID
@@ -21525,7 +21525,7 @@ Critter_Cond         1
 Critter_Anim1        0
 Critter_Anim2        0
 Critter_ParamIndex0  ST_DIALOG_ID
-Critter_ParamValue0  1085
+Critter_ParamValue0  1058
 Critter_ParamIndex1  ST_AI_ID
 Critter_ParamValue1  22
 Critter_ParamIndex2  ST_BAG_ID
@@ -21554,7 +21554,7 @@ Critter_Cond         1
 Critter_Anim1        0
 Critter_Anim2        0
 Critter_ParamIndex0  ST_DIALOG_ID
-Critter_ParamValue0  1085
+Critter_ParamValue0  1058
 Critter_ParamIndex1  ST_AI_ID
 Critter_ParamValue1  22
 Critter_ParamIndex2  ST_BAG_ID
@@ -21583,7 +21583,7 @@ Critter_Cond         1
 Critter_Anim1        0
 Critter_Anim2        0
 Critter_ParamIndex0  ST_DIALOG_ID
-Critter_ParamValue0  1085
+Critter_ParamValue0  1058
 Critter_ParamIndex1  ST_AI_ID
 Critter_ParamValue1  22
 Critter_ParamIndex2  ST_BAG_ID
