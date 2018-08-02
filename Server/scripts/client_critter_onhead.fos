@@ -38,6 +38,7 @@ void DrawCritterOnHead()	//export
 	string hp;
 	string inj;
 	string crInjures;
+	string crLevel;
 
 	CritterCl@ chosen = GetChosen();
 
@@ -147,6 +148,20 @@ void DrawCritterOnHead()	//export
 			}
 			else
 				inj = "";
+						//level
+			if(valid(chosen) && crs[i].Stat[ST_LEVEL] < 101)
+			{
+				crLevel = " |" + COLOR_RGB(200, 100, 0) + " * ";
+			}
+			if (valid(chosen) && crs[i].Stat[ST_LEVEL] > 100 && crs[i].Stat[ST_LEVEL] < 200)
+			{
+				crLevel = " |" + COLOR_RGB(200, 100, 0)+ " * * ";
+			}
+			if (valid(chosen) && crs[i].Stat[ST_LEVEL] > 199)
+			{
+				crLevel = " |" + COLOR_RGB(200, 100, 0) + " * * * ";
+			}
+			//level
 		}
 		else 
 		{
@@ -154,7 +169,7 @@ void DrawCritterOnHead()	//export
 			continue;	
 		}
 		
-		crs[i].NameOnHead = inj + hp + name;
+		crs[i].NameOnHead = inj + hp + name + crLevel;
 	}
 }
 
