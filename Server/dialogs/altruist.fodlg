@@ -98,7 +98,7 @@ lang=engl
 {1010}{}{have money or dog tags}
 {1020}{}{dogtags}
 {1030}{}{no money}
-{2000}{}{Welcome, traveler. What brings you to me? Oh yeah, if you're interested in the whole range of my services, come when you have more than 100 thousand caps on your hands...or some more...}
+{2000}{}{Welcome, @pname@. What brings you to me? Oh yeah, if you're interested in the whole range of my services, come when you have more than 100 thousand caps on your hands...or some more...}
 {2010}{}{[10k] - Take 1 level.}
 {2020}{}{[30k] - Take 3 levels.}
 {2030}{}{[40k] - Support Perk that I am eligible to take.}
