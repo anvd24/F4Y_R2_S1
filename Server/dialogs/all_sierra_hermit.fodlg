@@ -1,5 +1,6 @@
 [comment]
 
+
 [data]
 lang=engl
 
@@ -11,11 +12,13 @@ lang=engl
 20 2000 None 0 #
 3 2010 #
 0 2020 D _param p ST_INTELLECT > 3 #
-0 2030 D _param p ST_INTELLECT < 4 @
+0 2030 D _param p ST_INTELLECT < 4 #
+50 2040 @
 2 3000 None 0 #
 3 3010 #
 0 3020 D _param p ST_INTELLECT > 3 #
-0 3030 D _param p ST_INTELLECT < 4 @
+0 3030 D _param p ST_INTELLECT < 4 #
+50 3040 @
 3 4000 None 0 #
 65506 4010 D _param p ST_INTELLECT > 3 #
 4 4020 D _param p ST_INTELLECT > 3 #
@@ -47,7 +50,12 @@ lang=engl
 0 8010 D _param p ST_INTELLECT > 3 #
 65506 8020 D _param p ST_INTELLECT > 3 #
 0 8030 D _param p ST_INTELLECT < 4 #
-65506 8040 D _param p ST_INTELLECT < 4 &
+65506 8040 D _param p ST_INTELLECT < 4 @
+50 9000 None 0 #
+50 9010 D _item p PID_FLINT > 29 R _item p PID_FLINT - 30 R _item p PID_BOTTLE_CAPS + 1500 R _param p ST_EXPERIENCE + 500 #
+50 9020 D _item p PID_XANDER_ROOT > 99 R _item p PID_XANDER_ROOT - 100 R _item p PID_BOTTLE_CAPS + 2000 R _param p ST_EXPERIENCE + 1000 #
+50 9030 D _item p PID_BROC_FLOWER > 99 R _item p PID_BROC_FLOWER - 100 R _item p PID_BOTTLE_CAPS + 2000 R _param p ST_EXPERIENCE + 1000 #
+0 9040 &
 
 [engl]
 {100}{}{Hermit}
@@ -60,10 +68,12 @@ lang=engl
 {2010}{}{Heya.@@Howdee.}
 {2020}{}{Hey. See you later aligator.@@Goodbye.@@See you.}
 {2030}{}{Me no time.}
+{2040}{}{Perhaps you would be interested in my findings?}
 {3000}{}{Howdee traveller! I rarely meet people out here!}
 {3010}{}{Howdee!}
 {3020}{}{Hey. See you later aligator.@@Goodbye.@@See you.}
 {3030}{}{Me no time.}
+{3040}{}{Perhaps you would be interested in my findings?}
 {4000}{}{Do you want to barter?}
 {4010}{}{Yeah, why not.}
 {4020}{}{Do you know some locations on this area of the world?}
@@ -96,4 +106,9 @@ lang=engl
 {8020}{}{What about the trade again..?}
 {8030}{}{Me going.}
 {8040}{}{Me trade.}
+{9000}{}{There are some things I'm interested in. Let me see? i need flint, roots and flowers...}
+{9010}{}{Flint}
+{9020}{}{The Roots}
+{9030}{}{Broc - Flower}
+{9040}{}{Exit}
 

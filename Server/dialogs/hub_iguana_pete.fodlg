@@ -34,7 +34,7 @@ lang=engl
 4 3020 #
 0 3030 @
 4 4000 None 0 #
-5 4010 D _item p PID_BOTTLE_CAPS > 49 D _item n PID_MEAT > 0 R _script dialog@r_RemoveMoney 1 50 R _item n PID_MEAT - 1 R _item p PID_MEAT_ON_A_STICK + 1 #
+5 4010 D _item p PID_BOTTLE_CAPS > 6 D _item n PID_MEAT > 0 R _script dialog@r_RemoveMoney 1 7 R _item n PID_MEAT - 1 R _item p PID_MEAT_ON_A_STICK + 1 #
 5 4020 D _item p PID_BOTTLE_CAPS > 99 R _script dialog@r_RemoveMoney 1 100 R _item p PID_IGUANA_ON_A_STICK + 1 #
 5 4030 D _item p PID_BOTTLE_CAPS > 999 R _script dialog@r_RemoveMoney 1 1000 R _item p PID_IGUANA_ON_A_STICK + 10 #
 7 4040 #
@@ -85,11 +85,12 @@ lang=engl
 20 21000 None 0 #
 0 21010 @
 200 22000 None 0 #
-200 22010 D _item p PID_MEAT < 10 D _item n PID_MEAT < 100 R _item n PID_MEAT + 1 R _item p PID_MEAT - 1 R _item p PID_BOTTLE_CAPS + 5 #
-200 22020 D _item p PID_MEAT > 9 D _item n PID_MEAT < 100 R _item n PID_MEAT + 10 R _item p PID_MEAT - 10 R _item p PID_BOTTLE_CAPS + 50 #
-200 22030 D _item p PID_MEAT > 49 D _item n PID_MEAT < 100 R _item n PID_MEAT + 50 R _item p PID_MEAT - 50 R _item p PID_BOTTLE_CAPS + 250 #
-200 22040 D _item p PID_MEAT > 99 D _item n PID_MEAT < 100 R _item n PID_MEAT + 100 R _item p PID_MEAT - 100 R _item p PID_BOTTLE_CAPS + 500 #
-0 22050 D _item n PID_MEAT } 1000 &
+200 22010 D _item p PID_MEAT > 0 R _item n PID_MEAT + 1 R _item p PID_MEAT - 1 R _item p PID_BOTTLE_CAPS + 5 #
+200 22020 D _item p PID_MEAT > 9 R _item n PID_MEAT + 10 R _item p PID_MEAT - 10 R _item p PID_BOTTLE_CAPS + 50 #
+200 22030 D _item p PID_MEAT > 49 R _item n PID_MEAT + 50 R _item p PID_MEAT - 50 R _item p PID_BOTTLE_CAPS + 250 #
+200 22040 D _item p PID_MEAT > 99 R _item n PID_MEAT + 100 R _item p PID_MEAT - 100 R _item p PID_BOTTLE_CAPS + 500 #
+0 22050 D _item n PID_MEAT < 5000 #
+0 22060 D _item n PID_MEAT } 5000 &
 
 [engl]
 {100}{}{Iguana Pete}
@@ -111,8 +112,8 @@ lang=engl
 {3010}{}{So... uhm... Pete. Why is Bob's Iguana Bits written on the board?}
 {3020}{}{Oh, ok. Then give me an iguana-on-a-stick, Pete.}
 {3030}{}{Whatever. I have other stuff to do. Bye.}
-{4000}{}{That'll be 100 bottle caps. And if you don't like a lizards, you can give me 50 cups, and i make beef meat for you.}
-{4010}{}{Ok, 50 cups, and I do not like to eat the lizards, I wana meat please.}
+{4000}{}{That'll be 100 bottle caps. And if you don't like a lizards, you can give me 7 cups, and i make beef meat for you.}
+{4010}{}{Ok, 7 cups, and I do not like to eat the lizards, I wana meat please.}
 {4020}{}{Ok, here you go. Give me one damn iguana.}
 {4030}{}{Okay, gimme my ten fresh jucy sweet iguana . Come on i like it...}
 {4040}{}{100 bottle caps, what the fuck?}
@@ -167,7 +168,8 @@ lang=engl
 {22020}{}{Sell to him 10 pices of meat}
 {22030}{}{Sell to him 50 pices of meat}
 {22040}{}{Sell to him 100 pices of meat}
-{22050}{}{You understand that he does not need meat right now, the entire counter is littered with pieces of meat...}
+{22050}{}{I need to go}
+{22060}{}{You understand that he does not need meat right now, the entire counter is littered with pieces of meat...}
 {100000001}{}{IGUANA! Fresh Iguana-on-a-stick! Buy some IGUANA!}
 {100000002}{}{IGUANA! BUY IGUANA!}
 {100000003}{}{People, fresh Iguana-on-a-stick! Buy Iguana-on-a-stick now!}
