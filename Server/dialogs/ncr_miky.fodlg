@@ -14,7 +14,7 @@ lang=engl
 1 1000 None 0 #
 2 1010 @
 2 2000 None 0 #
-65506 2010 R _item n PID_IGUANA_ON_A_STICK = 10 R _item n PID_MEAT_ON_A_STICK = 10 R _item n PID_WATERBAG = 10 R _item n PID_BOTTLE_FULL = 10 #
+65506 2010 R _item n PID_IGUANA_ON_A_STICK = 5 R _item n PID_MEAT_ON_A_STICK = 5 R _item n PID_WATERBAG = 5 R _item n PID_BOTTLE_FULL = 5 #
 3 2020 #
 4 2030 D _var p mod_q_meat_jerky = 1 D _item p PID_MEAT_BAG > 0 R _var p mod_q_meat_jerky = 2 R _item p PID_MEAT_BAG - 1 R _param p ST_EXPERIENCE + 720 R _script dialog@r_AddMoney 1 320 #
 5 2040 D _var p q_iguana_pete_message = 1 #
@@ -42,7 +42,7 @@ lang=engl
 
 [engl]
 {100}{}{Mikey}
-{200}{}{You see a sharp-dressed guy hawking lizard kebabs.}
+{200}{}{You see a sharp-dressed guy hawking lizard kebabs. This guy a food and drinks maker.}
 {210}{}{It's the lizard-on-a-stick vendor.}
 {210}{}{For a lizard-on-a-stick vendor, this guy's got style. He's clean, well-dressed and runs a pretty spotless little operation.}
 {1000}{}{Predialogue installations}
