@@ -2250,9 +2250,27 @@ void critter_idle(Critter& cr)
 				}
 				}
 		}
-		/////
+				/////
 		
-		_SetTimeout(cr, TO_WEAKENED, (REAL_MINUTE((10 + cr.Stat[ST_ENDURANCE]) + Random(1, cr.Stat[ST_ENDURANCE]))));
+		_SetTimeout(cr, TO_WEAKENED, (REAL_MINUTE((10 + cr.Stat[ST_ENDURANCE]) + cr.Stat[ST_STRENGTH])));
+		
+		// add some exp to all players in a game 
+		 if(cr.StatBase[ST_LEVEL] < 300)
+		 {
+		 //cr.StatBase[ST_EXPERIENCE] += (cr.Stat[ST_PERCEPTION] * Random(1,cr.Stat[ST_LUCK])) * 3.33;
+		 //or this variant
+		 cr.StatBase[ST_EXPERIENCE] += (333 - (cr.StatBase[ST_HUNGER_LEVEL] + cr.StatBase[ST_THIRST_LEVEL]));
+		 cr.Say(SAY_NETMSG,".Your character has noticed something unusual, and got a bit of Experience."); 
+		 //cr.Say(SAY_EMOTE_ON_HEAD,".@#%&#$%.");
+		 switch (Random(1,5))
+			{
+				case 1: {cr.Say(SAY_EMOTE_ON_HEAD, "Oo"); break;}
+				case 2: {cr.Say(SAY_EMOTE_ON_HEAD, "oO"); break;}
+				case 3: {cr.Say(SAY_EMOTE_ON_HEAD, "@#%&#$%"); break;}	
+				case 4: {cr.Say(SAY_EMOTE_ON_HEAD, "OO"); break;}
+			    case 5: {cr.Say(SAY_EMOTE_ON_HEAD, "Your character has noticed something unusual"); break;}
+			}
+		 }
     }
 
     // try to heal injuries

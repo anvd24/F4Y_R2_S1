@@ -24,8 +24,9 @@ lang=engl
 3 2110 D _param p ST_STRENGTH > 99 R _item p PID_BOTTLE_CAPS + 100000 #
 500 2120 D _param p ST_UNSPENT_SKILL_POINTS > 0 #
 700 2130 D _item p PID_DOGTAGS > 0 #
-0 2140 #
-10 2150 D _item p PID_BOTTLE_CAPS } 450000 @
+800 2140 D _item p PID_CAR_FUEL_CELL_CONTROLLER < 1 #
+0 2150 #
+10 2160 D _item p PID_BOTTLE_CAPS } 450000 @
 3 3000 None 0 @
 4 4000 None 0 #
 3 4010 D _script dialog_altruist@d_CanTakePerk 1 301 D _item p PID_BOTTLE_CAPS > 39999 R _script dialog@r_RemoveMoney 1 40000 R _script dialog_altruist@r_GivePerk 1 301 #
@@ -88,7 +89,11 @@ lang=engl
 700 9000 None 0 #
 700 9010 D _item p PID_DOGTAGS > 0 R _item p PID_DOGTAGS - 1 R _item p PID_BOTTLE_CAPS + 3000 #
 0 9020 @
-666 10000 None 0 &
+800 10000 None 0 #
+801 10010 D _item p PID_BOTTLE_CAPS > 49999 R _script dialog@r_RemoveMoney 1 50000 R _item p PID_CAR_FUEL_CELL_CONTROLLER + 1 #
+65505 10020 D _item p PID_BOTTLE_CAPS < 49999 @
+666 11000 None 0 @
+801 12000 None 0 &
 
 [engl]
 {100}{}{Zerg-Man}
@@ -112,8 +117,9 @@ lang=engl
 {2110}{}{[GM-Option] Gimme 100.000 caps.}
 {2120}{}{[FREE] - Remove USP}
 {2130}{}{I found a token in the wasteland}
-{2140}{}{Close dialog}
-{2150}{}{I'm interested in special manipulations.}
+{2140}{}{I'm looking for one detail. They say it can be found in old cars...}
+{2150}{}{Close dialog}
+{2160}{}{I'm interested in special manipulations.}
 {3000}{}{Yes.}
 {4000}{}{Which one? One Support Perk cost 40 000 caps. If you need this, you must pay.}
 {4010}{}{@msg game 103011@}
@@ -176,5 +182,9 @@ lang=engl
 {9000}{}{Let their bodies rest in peace, give them here. I think the sum of 3,000 caps will be sufficient.}
 {9010}{}{{You give a Dog Tag to this man}
 {9020}{}{Not now.}
-{10000}{}{Know what traveler? I won't even talk to you. When you bring me 100 thousand caps and show me them, in your hands of course, maybe then we'll talk.}
+{10000}{}{Yes, traveler, I've walked many miles through the wasteland and I think I know what you're interested in. The fuel controller, it'll cost you 50,000 caps, Deal?}
+{10010}{}{yeah, that's what I need. I'll take it. [you give 50K caps into the old man's paw ]}
+{10020}{}{I think not today, back to the previous dialogue}
+{11000}{}{Know what traveler? I won't even talk to you. When you bring me 100 thousand caps and show me them, in your hands of course, maybe then we'll talk.}
+{12000}{}{I'm glad this thing will do you good, good luck @pname@. ..}
 
