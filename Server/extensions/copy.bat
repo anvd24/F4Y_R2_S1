@@ -1,1 +1,0 @@
-copy Release\*.dll ..\scripts
