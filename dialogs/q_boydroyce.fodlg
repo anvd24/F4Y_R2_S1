@@ -243,7 +243,9 @@ lang=engl russ pols ptbr
 {36000}{}{Leave me alone, Mukker.@@Scram.@@Get lost.@@I ain't got time for ya.@@Go bother someone else.@@I ain't got time for ya.@@Go bother someone else.@@Leave me alone.}
 
 [russ]
-{100}{}{none}
+{100}{}{Boyd}
+{200}{}{You see: Boyd Royce.}
+{210}{}{This man seems to be in his late forties. The smell of digested alcohol is all around him.}
 {1000}{}{Predialogue installations}
 {1010}{}{temp lock check}
 {1020}{}{combat dialog}
@@ -361,7 +363,9 @@ lang=engl russ pols ptbr
 {36000}{}{Leave me alone, Mukker.@@Scram.@@Get lost.}
 
 [pols]
-{100}{}{none}
+{100}{}{Boyd}
+{200}{}{You see: Boyd Royce.}
+{210}{}{This man seems to be in his late forties. The smell of digested alcohol is all around him.}
 {1000}{}{Predialogue installations}
 {1010}{}{temp lock check}
 {1020}{}{combat dialog}
@@ -479,7 +483,9 @@ lang=engl russ pols ptbr
 {36000}{}{Leave me alone, Mukker.@@Scram.@@Get lost.}
 
 [ptbr]
-{100}{}{none}
+{100}{}{Boyd}
+{200}{}{You see: Boyd Royce.}
+{210}{}{This man seems to be in his late forties. The smell of digested alcohol is all around him.}
 {1000}{}{Predialogue installations}
 {1010}{}{temp lock check}
 {1020}{}{combat dialog}
