@@ -1,2 +1,7 @@
-# F4Y_R2_S1
-Server and Client And Tools For Server Fallout Online 2238 Reloade ENGB
+# F4Y_HardCore
+F4Y - 0nline
+Created by players for players
+
+https://vk.com/fonline4you
+
+https://discordapp.com/invite/6qMZ2Ez
